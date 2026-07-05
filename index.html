@@ -332,26 +332,70 @@
   // ----- Replace these with your real photos -----
   // Swap the "grad" gradients for image URLs later: set img:"photos/filename.jpg"
   const SHOTS = [
+    // Carolina Coast
+    { title: "Intracoastal Sunset", cat: "Carolina Coast", slug: "INTRACOASTAL WATERWAY, SC", cap: "A small boat runs the waterway as the sky catches fire at last light.", img: "photos/fineart/carolina-coast/intracoastal-sunset.jpg", cover: true },
+    { title: "Intracoastal Close", cat: "Carolina Coast", slug: "INTRACOASTAL WATERWAY, SC", cap: "Sunset color breaks across the surface of the waterway.", img: "photos/fineart/carolina-coast/intracoastal-close.jpg" },
+    { title: "Seed Head at the Marsh", cat: "Carolina Coast", slug: "SALT MARSH", cap: "A dried seed head stands over still water at the marsh's edge.", img: "photos/fineart/carolina-coast/seed-head-marsh.jpg" },
+    { title: "Spring Blossom", cat: "Carolina Coast", slug: "MYRTLE BEACH, SC", cap: "New blossoms open on a bare branch in early spring light.", img: "photos/fineart/carolina-coast/spring-blossom.jpg" },
+    { title: "Wheel at Broadway", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH \u2014 MYRTLE BEACH, SC", cap: "The Broadway 360 wheel turns against a clear summer sky.", img: "photos/fineart/carolina-coast/broadway-wheel-blue-sky.jpg" },
+    { title: "Lighthouse at Broadway", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH \u2014 MYRTLE BEACH, SC", cap: "A replica lighthouse rises against a clear blue sky.", img: "photos/fineart/carolina-coast/broadway-lighthouse.jpg" },
+    { title: "Broadway at Sunset", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH \u2014 MYRTLE BEACH, SC", cap: "The wheel and waterfront rides glow under a burning sunset sky.", img: "photos/fineart/carolina-coast/broadway-sunset.jpg" },
+    { title: "Storm Over Garden City Pier", cat: "Carolina Coast", slug: "GARDEN CITY, SC", cap: "Waves break beneath the pier as a storm rolls in overhead.", img: "photos/fineart/carolina-coast/storm-garden-city-pier.jpg" },
+    { title: "Heron in the Marsh", cat: "Carolina Coast", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "A heron wades the shallows at low tide.", img: "photos/fineart/carolina-coast/heron-huntington-marsh.jpg" },
+    { title: "Beneath the Live Oaks", cat: "Carolina Coast", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "Spanish moss frames a view out over the marsh.", img: "photos/fineart/carolina-coast/huntington-beach-live-oaks.jpg" },
+    { title: "Surfside Pier, Blue Hour", cat: "Carolina Coast", slug: "SURFSIDE BEACH, SC", cap: "The rebuilt pier glows above the water as the town lights come on.", img: "photos/fineart/carolina-coast/surfside-pier-blue-hour.jpg" },
     { title: "Surfside Pier at Night", cat: "Carolina Coast", slug: "SURFSIDE BEACH, SC", cap: "The pier reaches back toward shore under its own light. Aerial night exposure.", img: "photos/fineart/carolina-coast/surfside-pier-night.jpg" },
-    { title: "Intracoastal Sunset", cat: "Carolina Coast", slug: "INTRACOASTAL WATERWAY, SC", cap: "A small boat runs the waterway at last light.", img: "photos/fineart/carolina-coast/intracoastal-sunset.jpg" },
-    { title: "Broadway 360 From Below", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH \u2014 MYRTLE BEACH, SC", cap: "Looking up through the spokes of the Broadway 360 wheel.", img: "photos/fineart/carolina-coast/broadway-360-below.jpg" },
-    { title: "Broadway at Dusk", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH \u2014 MYRTLE BEACH, SC", cap: "The Broadway 360 wheel and WonderWorks against a sunset sky.", img: "photos/fineart/carolina-coast/broadway-at-dusk.jpg" },
-    { title: "Milky Way Core", cat: "Carolina After Dark", slug: "DARK SKY SITE, NC", cap: "Galactic core rising, 20-second exposure.", grad: ["#141a33", "#5a4a8a"] },
-    { title: "Star Trails Over the Sound", cat: "Carolina After Dark", slug: "COASTAL PLAIN", cap: "Two-hour stacked exposure, north-facing.", grad: ["#101528", "#3d5a8a"] },
-    { title: "Intracoastal at Night", cat: "Carolina After Dark", slug: "INTRACOASTAL WATERWAY, SC", cap: "A long exposure over still water, the waterway lit only by the sky and shoreline.", img: "photos/fineart/carolina-after-dark/intracoastal-night.jpg" },
+    { title: "Surfside Pier, Aerial Silhouette", cat: "Carolina Coast", slug: "SURFSIDE BEACH, SC", cap: "Only the pier's lights break the dark water below.", img: "photos/fineart/carolina-coast/surfside-pier-aerial-silhouette.jpg" },
+    { title: "Rust and Rainbow", cat: "Carolina Coast", slug: "ROADSIDE, SC", cap: "Four vintage Volkswagen buses sit retired in the grass.", img: "photos/fineart/carolina-coast/vw-buses.jpg" },
+    { title: "Waccamaw Bend", cat: "Carolina Coast", slug: "WACCAMAW RIVER, SC", cap: "The river bends through bare cypress on a gray winter afternoon.", img: "photos/fineart/carolina-coast/waccamaw-river-bend-winter.jpg" },
+    { title: "Waccamaw River, High Above", cat: "Carolina Coast", slug: "WACCAMAW RIVER, SC", cap: "The river threads for miles through coastal forest, seen from high altitude.", img: "photos/fineart/carolina-coast/waccamaw-river-high-altitude.jpg" },
+    { title: "Waccamaw Confluence", cat: "Carolina Coast", slug: "WACCAMAW RIVER, SC", cap: "Two channels of the river meet, seen from directly overhead.", img: "photos/fineart/carolina-coast/waccamaw-river-confluence.jpg" },
+
+    // Carolina After Dark
+    { title: "Surfside Pier, Blue Hour", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "The rebuilt pier glows above the water as the town lights come on.", img: "photos/fineart/carolina-after-dark/surfside-pier-blue-hour.jpg", cover: true },
+    { title: "Moon", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "A gibbous moon rises alone in a black sky.", img: "photos/fineart/carolina-after-dark/moon.jpg" },
+    { title: "Night Sky Through Pines", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "Stars gather in a gap between silhouetted pines.", img: "photos/fineart/carolina-after-dark/night-sky-through-pines.jpg" },
+    { title: "Blood Moon", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "The moon turns deep red during a total lunar eclipse.", img: "photos/fineart/carolina-after-dark/blood-moon.jpg" },
+    { title: "Stars Over Surfside", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "A long exposure of the surf under a star-filled sky.", img: "photos/fineart/carolina-after-dark/stars-over-surfside.jpg" },
+    { title: "Pier Lights at Midnight", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "String lights outline the pier's pavilion against a black sky, moonlight tracking across the water.", img: "photos/fineart/carolina-after-dark/pier-lights-midnight.jpg" },
+    { title: "Canopy of Stars", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "The Milky Way's haze spreads over a ring of pines.", img: "photos/fineart/carolina-after-dark/canopy-of-stars.jpg" },
+    { title: "Moonrise Through the Pines", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "Moonlight rims the trees as stars fill the gaps between branches.", img: "photos/fineart/carolina-after-dark/moonrise-through-pines.jpg" },
+    { title: "Surfside Pier at Night", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "The pier reaches back toward shore under its own light. Aerial night exposure.", img: "photos/fineart/carolina-after-dark/surfside-pier-night.jpg" },
+    { title: "Intracoastal at Night", cat: "Carolina After Dark", slug: "INTRACOASTAL WATERWAY, SC", cap: "A long exposure over still water, the waterway lit only by the moon and shoreline.", img: "photos/fineart/carolina-after-dark/intracoastal-night.jpg" },
+
+    // Experimental Processes
+    { title: "Green Current", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram, looping current rendered in acid green.", img: "photos/fineart/experimental-processes/chemigram-green-current.jpg", cover: true },
     { title: "Phase Shift", cat: "Experimental Processes", slug: "STUDIO", cap: "A triptych chemigram, three panels of chemical reaction across a single frame.", img: "photos/fineart/experimental-processes/phase-shift.jpg" },
     { title: "Amber Bloom", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram, developer bleeding gold and black across the paper.", img: "photos/fineart/experimental-processes/chemigram-amber-bloom.jpg" },
     { title: "Black Bloom", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram in high contrast, chemical reaction outlined in white.", img: "photos/fineart/experimental-processes/chemigram-black-bloom.jpg" },
     { title: "Magenta Drift", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram, magenta and amber tones pooling across the emulsion.", img: "photos/fineart/experimental-processes/chemigram-magenta-drift.jpg" },
-    { title: "Green Current", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram, looping current rendered in acid green.", img: "photos/fineart/experimental-processes/chemigram-green-current.jpg" },
     { title: "Lumen Print No. 1", cat: "Experimental Processes", slug: "STUDIO", cap: "Botanical lumen print, sun-exposed directly on photo paper.", img: "photos/fineart/experimental-processes/lumen-print-01.jpg" },
     { title: "Lumen Print No. 2", cat: "Experimental Processes", slug: "STUDIO", cap: "Lumen print of a flower in bloom, colors shifted by exposure time.", img: "photos/fineart/experimental-processes/lumen-print-02.jpg" },
     { title: "Lumen Print No. 3", cat: "Experimental Processes", slug: "STUDIO", cap: "Lumen print of leaf and stem, warm tones from a long sun exposure.", img: "photos/fineart/experimental-processes/lumen-print-03.jpg" },
+
+    // Black and White
+    { title: "Pasture Fence", cat: "Black and White", slug: "PASTURE", cap: "A weathered fence line, a horse grazing soft in the background.", img: "photos/fineart/black-and-white/pasture-fence.jpg", cover: true },
     { title: "Garden City Pier", cat: "Black and White", slug: "GARDEN CITY, SC", cap: "Storm light and breaking surf beneath the pier, in monochrome.", img: "photos/fineart/black-and-white/garden-city-pier.jpg" },
-    { title: "Shoreline From Above", cat: "Aerial Perspectives", slug: "AERIAL", cap: "Tidal patterns from altitude.", grad: ["#3a5a4a", "#c2b280"] },
-    { title: "Heron at First Light", cat: "Wildlife", slug: "SALT MARSH", cap: "Great blue heron hunting the shallows.", grad: ["#6b5b3e", "#d9c7a0"] },
-    { title: "Fox at Dusk", cat: "Wildlife", slug: "PINE FOREST", cap: "A gray fox emerges as light fails.", grad: ["#5a3d2e", "#c98b5a"] },
-    { title: "Breaker in Motion", cat: "Motion and Energy", slug: "ATLANTIC", cap: "Intentional camera movement, incoming set.", grad: ["#4a4e59", "#9aa3b2"] },
+    { title: "Surfside Pier After Dark", cat: "Black and White", slug: "SURFSIDE BEACH, SC", cap: "An aerial view of the pier lit alone against the night.", img: "photos/fineart/black-and-white/surfside-pier-aerial-night.jpg" },
+    { title: "Weathered Chair", cat: "Black and White", slug: "BACKYARD, SC", cap: "A collapsing adirondack chair, reclaimed by the treeline.", img: "photos/fineart/black-and-white/weathered-chair.jpg" },
+    { title: "Web and Spider", cat: "Black and White", slug: "BACKYARD, SC", cap: "A garden spider rebuilds its web among the fall foliage.", img: "photos/fineart/black-and-white/spider-web.jpg" },
+
+    // Aerial Perspectives
+    { title: "Winter on the Waccamaw", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "A boat works the river beneath a bruised winter sky, seen from altitude.", img: "photos/fineart/aerial-perspectives/waccamaw-river-winter-boat.jpg", cover: true },
+    { title: "Waccamaw Bend", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "The river bends through bare cypress on a gray winter afternoon.", img: "photos/fineart/aerial-perspectives/waccamaw-river-bend-winter.jpg" },
+    { title: "Waccamaw River, High Above", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "The river threads for miles through coastal forest, seen from high altitude.", img: "photos/fineart/aerial-perspectives/waccamaw-river-high-altitude.jpg" },
+    { title: "Waccamaw Serpentine", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "Another pass over the river's bends, green canopy in every direction.", img: "photos/fineart/aerial-perspectives/waccamaw-river-serpentine.jpg" },
+
+    // Wildlife
+    { title: "Alligator in the Brush", cat: "Wildlife", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "An alligator rests low in the reeds along the water's edge.", img: "photos/fineart/wildlife/alligator-huntington-beach.jpg", cover: true },
+    { title: "Ring-Billed Gull", cat: "Wildlife", slug: "MARKET COMMON, SC", cap: "A ring-billed gull poses at The Market Common.", img: "photos/fineart/wildlife/gull-portrait-market-common.jpg" },
+    { title: "Gulls on the Rail", cat: "Wildlife", slug: "MARKET COMMON, SC", cap: "Gulls line a railing at The Market Common's lake.", img: "photos/fineart/wildlife/gulls-on-rail-market-common.jpg" },
+    { title: "Great Blue Heron", cat: "Wildlife", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "A great blue heron hunts the shallows at low tide.", img: "photos/fineart/wildlife/great-blue-heron.jpg" },
+    { title: "Rooster", cat: "Wildlife", slug: "BACKYARD, SC", cap: "A bantam rooster crows from a fence post.", img: "photos/fineart/wildlife/rooster.jpg" },
+
+    // Motion and Energy
+    { title: "Fourth of July", cat: "Motion and Energy", slug: "MYRTLE BEACH, SC", cap: "Fireworks burst over the palms on Independence Day.", img: "photos/fineart/motion-and-energy/fourth-of-july-fireworks.jpg", cover: true },
+    { title: "Full Throttle", cat: "Motion and Energy", slug: "BROADWAY AT THE BEACH \u2014 MYRTLE BEACH, SC", cap: "A jet boat carves a hard turn, spray catching the afternoon light.", img: "photos/fineart/motion-and-energy/speedboat-broadway.jpg" },
   ];
 
   const SERIES = ["Carolina Coast", "Carolina After Dark", "Experimental Processes", "Black and White", "Aerial Perspectives", "Wildlife", "Motion and Energy"];
@@ -369,8 +413,9 @@
 
   function coverFor(name) {
     const shots = SHOTS.filter(s => s.cat === name);
+    const cover = shots.find(s => s.cover);
     const withImg = shots.find(s => s.img);
-    return bg(withImg || shots[0]);
+    return bg(cover || withImg || shots[0]);
   }
 
   function renderSeries() {
