@@ -433,8 +433,8 @@
       location: "ATLANTA",
       date: "June 24, 2026",
       photos: [
-        { img: "photos/events/2026-06-24-morocco-haiti/bounou-pressure.jpg", cap: "Morocco goalkeeper Yassine Bounou plays the ball out of the back under pressure from a Haiti attacker during their Group C match at the FIFA World Cup, Mercedes-Benz Stadium." },
-        { img: "photos/events/2026-06-24-morocco-haiti/haiti-goal.jpg", cap: "Haiti take a 10th-minute lead over Morocco as goalkeeper Yassine Bounou is beaten at his near post, FIFA World Cup Group C, Mercedes-Benz Stadium." }
+        { img: "photos/events/2026-06-24-morocco-haiti/bounou-pressure.jpg", taken: "2026-06-24T19:00:00", cap: "Morocco goalkeeper Yassine Bounou plays the ball out of the back under pressure from a Haiti attacker during their Group C match at the FIFA World Cup, Mercedes-Benz Stadium." },
+        { img: "photos/events/2026-06-24-morocco-haiti/haiti-goal.jpg", taken: "2026-06-24T19:01:00", cap: "Haiti take a 10th-minute lead over Morocco as goalkeeper Yassine Bounou is beaten at his near post, FIFA World Cup Group C, Mercedes-Benz Stadium." }
       ]
     }
   ];
@@ -448,6 +448,7 @@
 
   function evBg(p) { return p.img ? `url('${p.img}') center/cover no-repeat` : `linear-gradient(140deg, ${p.grad[0]}, ${p.grad[1]})`; }
   function evBgFull(p) { return p.img ? `url('${p.img}') center/contain no-repeat` : `linear-gradient(140deg, ${p.grad[0]}, ${p.grad[1]})`; }
+  function chronoPhotos(ev) { return [...ev.photos].sort((a, b) => new Date(a.taken) - new Date(b.taken)); }
 
   function renderEvents() {
     eventGrid.innerHTML = "";
@@ -459,7 +460,7 @@
       card.style.textAlign = "left";
       card.style.cursor = "pointer";
       card.innerHTML = `
-        <div class="essay-img" style="background:${evBg(ev.photos[0])}"></div>
+        <div class="essay-img" style="background:${evBg(chronoPhotos(ev)[0])}"></div>
         <div class="essay-body">
           <span class="essay-tag">${ev.date} &middot; ${ev.photos.length} ${ev.photos.length === 1 ? "frame" : "frames"}</span>
           <h3>${ev.title}</h3>
@@ -476,7 +477,7 @@
     document.getElementById("eventTitle").textContent = ev.title.replace(/\u2014/g, "\u2014");
     document.getElementById("eventMeta").textContent = ev.location + " \u00b7 " + ev.date;
     eventPhotos.innerHTML = "";
-    ev.photos.forEach(p => {
+    chronoPhotos(ev).forEach(p => {
       const card = document.createElement("button");
       card.className = "essay";
       card.style.textAlign = "left";
