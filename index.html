@@ -449,6 +449,7 @@
   function evBg(p) { return p.img ? `url('${p.img}') center/cover no-repeat` : `linear-gradient(140deg, ${p.grad[0]}, ${p.grad[1]})`; }
   function evBgFull(p) { return p.img ? `url('${p.img}') center/contain no-repeat` : `linear-gradient(140deg, ${p.grad[0]}, ${p.grad[1]})`; }
   function chronoPhotos(ev) { return [...ev.photos].sort((a, b) => new Date(a.taken) - new Date(b.taken)); }
+  function coverPhoto(ev) { return ev.photos.find(p => p.cover) || chronoPhotos(ev)[0]; }
 
   function renderEvents() {
     eventGrid.innerHTML = "";
@@ -460,7 +461,7 @@
       card.style.textAlign = "left";
       card.style.cursor = "pointer";
       card.innerHTML = `
-        <div class="essay-img" style="background:${evBg(chronoPhotos(ev)[0])}"></div>
+        <div class="essay-img" style="background:${evBg(coverPhoto(ev))}"></div>
         <div class="essay-body">
           <span class="essay-tag">${ev.date} &middot; ${ev.photos.length} ${ev.photos.length === 1 ? "frame" : "frames"}</span>
           <h3>${ev.title}</h3>
