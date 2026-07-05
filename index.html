@@ -199,7 +199,9 @@
   @media (min-width: 720px) { .about-wrap { grid-template-columns: 200px 1fr; } }
   .headshot {
     width: 180px; height: 180px; border-radius: 4px;
-    background: linear-gradient(150deg, #6b6f75, #3a3d42);
+    background: url('about-me.png');
+    background-size: cover;
+    background-position: center;
     border: 1px solid var(--rule);
   }
   .about-text p { margin-bottom: 14px; max-width: 66ch; }
@@ -290,7 +292,7 @@
   <p class="kicker">About</p>
   <h2>Daniel Durgin</h2>
   <div class="about-wrap">
-    <div class="headshot" aria-label="Headshot placeholder"></div>
+    <div class="headshot" role="img" aria-label="Daniel Durgin"></div>
     <div class="about-text">
       <p>I'm a photographer based in Myrtle Beach, South Carolina. My fine art work spans seven ongoing series, from Carolina Coast to Experimental Processes &mdash; exactly what it sounds like. On the editorial side, I shoot sporting events and community assignments, where the job is simple: get the shot, get the caption right, don't miss the moment.</p>
       <p>Whether it's for an editor, a client, or someone who wants a print on their wall, the approach is the same &mdash; show up prepared and deliver work people can count on.</p>
