@@ -451,7 +451,8 @@
 
   function renderEvents() {
     eventGrid.innerHTML = "";
-    const list = showPast ? EVENTS : EVENTS.slice(0, 3);
+    const sorted = [...EVENTS].sort((a, b) => new Date(b.date) - new Date(a.date));
+    const list = showPast ? sorted : sorted.slice(0, 3);
     list.forEach(ev => {
       const card = document.createElement("button");
       card.className = "essay";
