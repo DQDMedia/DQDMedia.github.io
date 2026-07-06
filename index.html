@@ -195,6 +195,15 @@
     position: absolute; top: 16px; right: 16px; background: none; border: 1px solid #555;
     color: #ddd; border-radius: 999px; width: 38px; height: 38px; font-size: 17px; cursor: pointer;
   }
+  .lb-nav {
+    position: absolute; top: 50%; transform: translateY(-50%); background: rgba(20,19,17,0.6);
+    border: 1px solid #555; color: #ddd; border-radius: 999px; width: 44px; height: 44px;
+    font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .lb-nav:hover, .lb-nav:focus-visible { border-color: #f0b429; color: #f0b429; }
+  .lb-prev { left: 10px; }
+  .lb-next { right: 10px; }
+  @media (min-width: 760px) { .lb-prev { left: 24px; } .lb-next { right: 24px; } }
 
   /* ---------- About / Contact ---------- */
   .about-wrap { display: grid; gap: 28px; grid-template-columns: 1fr; }
@@ -330,6 +339,8 @@
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
   <button class="lb-close" id="lbClose" aria-label="Close">&#10005;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image">&#8249;</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next image">&#8250;</button>
   <div class="lb-card">
     <div class="lb-img" id="lbImg"></div>
     <p class="lb-cap" id="lbCap"></p>
@@ -416,6 +427,43 @@
   const lb = document.getElementById("lightbox");
   const lbImg = document.getElementById("lbImg");
   const lbCap = document.getElementById("lbCap");
+  const lbPrev = document.getElementById("lbPrev");
+  const lbNext = document.getElementById("lbNext");
+
+  let lbItems = [];
+  let lbIndex = 0;
+  let lbRenderer = null;
+
+  function showLightboxAt(i) {
+    lbIndex = (i + lbItems.length) % lbItems.length;
+    const r = lbRenderer(lbItems[lbIndex]);
+    lbImg.style.background = r.bg;
+    lbCap.innerHTML = r.cap;
+    lbLink.textContent = r.linkText;
+    lbLink.href = r.linkHref;
+  }
+
+  function openLightbox(items, startIndex, renderer) {
+    lbItems = items;
+    lbRenderer = renderer;
+    showLightboxAt(startIndex);
+    lb.classList.add("open");
+    const showNav = lbItems.length > 1;
+    lbPrev.style.display = showNav ? "flex" : "none";
+    lbNext.style.display = showNav ? "flex" : "none";
+  }
+
+  lbPrev.onclick = (e) => { e.stopPropagation(); showLightboxAt(lbIndex - 1); };
+  lbNext.onclick = (e) => { e.stopPropagation(); showLightboxAt(lbIndex + 1); };
+
+  let lbTouchStartX = null;
+  lb.addEventListener("touchstart", (e) => { lbTouchStartX = e.changedTouches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", (e) => {
+    if (lbTouchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - lbTouchStartX;
+    if (Math.abs(dx) > 40) { dx > 0 ? showLightboxAt(lbIndex - 1) : showLightboxAt(lbIndex + 1); }
+    lbTouchStartX = null;
+  }, { passive: true });
 
   function bg(s) { return s.img ? `url('${s.img}') center/cover no-repeat` : `linear-gradient(140deg, ${s.grad[0]}, ${s.grad[1]})`; }
   function bgFull(s) { return s.img ? `url('${s.img}') center/contain no-repeat` : `linear-gradient(140deg, ${s.grad[0]}, ${s.grad[1]})`; }
@@ -456,7 +504,8 @@
 
   function renderGrid(name) {
     gridEl.innerHTML = "";
-    SHOTS.filter(s => s.cat === name).forEach(s => {
+    const shots = SHOTS.filter(s => s.cat === name);
+    shots.forEach((s, idx) => {
       const fig = document.createElement("button");
       fig.className = "shot";
       fig.setAttribute("aria-label", "View " + s.title);
@@ -467,11 +516,12 @@
           <div class="meta">${s.cat}</div>
         </figcaption>`;
       fig.onclick = () => {
-        lbImg.style.background = bgFull(s);
-        lbCap.innerHTML = `<span class="slug">${s.slug} &mdash;</span> ${s.cap}`;
-        lbLink.textContent = "Purchase this print \u2192";
-        lbLink.href = "https://dqdmedia.client-gallery.com/gallery/dqdmedia";
-        lb.classList.add("open");
+        openLightbox(shots, idx, (item) => ({
+          bg: bgFull(item),
+          cap: `<span class="slug">${item.slug} &mdash;</span> ${item.cap}`,
+          linkText: "Purchase this print \u2192",
+          linkHref: "https://dqdmedia.client-gallery.com/gallery/dqdmedia"
+        }));
       };
       gridEl.appendChild(fig);
     });
@@ -479,7 +529,12 @@
 
   document.getElementById("lbClose").onclick = () => lb.classList.remove("open");
   lb.onclick = (e) => { if (e.target === lb) lb.classList.remove("open"); };
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") lb.classList.remove("open"); });
+  document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") lb.classList.remove("open");
+    if (e.key === "ArrowLeft") showLightboxAt(lbIndex - 1);
+    if (e.key === "ArrowRight") showLightboxAt(lbIndex + 1);
+  });
 
   const EVENTS = [
     {
@@ -606,7 +661,8 @@
     document.getElementById("eventTitle").textContent = ev.title.replace(/\u2014/g, "\u2014");
     document.getElementById("eventMeta").textContent = ev.location + " \u00b7 " + ev.date;
     eventPhotos.innerHTML = "";
-    chronoPhotos(ev).forEach(p => {
+    const photos = chronoPhotos(ev);
+    photos.forEach((p, idx) => {
       const card = document.createElement("button");
       card.className = "essay";
       card.style.textAlign = "left";
@@ -617,11 +673,12 @@
           <p class="wire"><span class="slug">${ev.location} \u2014</span> ${p.cap}</p>
         </div>`;
       card.onclick = () => {
-        lbImg.style.background = evBgFull(p);
-        lbCap.innerHTML = `<span class="slug">${ev.location} \u2014</span> ${p.cap}`;
-        lbLink.textContent = "License this image \u2192";
-        lbLink.href = "mailto:daniel@dqdmedia.com?subject=Image licensing inquiry";
-        lb.classList.add("open");
+        openLightbox(photos, idx, (item) => ({
+          bg: evBgFull(item),
+          cap: `<span class="slug">${ev.location} \u2014</span> ${item.cap}`,
+          linkText: "License this image \u2192",
+          linkHref: "mailto:daniel@dqdmedia.com?subject=Image licensing inquiry"
+        }));
       };
       eventPhotos.appendChild(card);
     });
