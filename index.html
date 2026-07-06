@@ -242,12 +242,20 @@
   .contact .kicker { color: #f0b429; }
   .contact h2 { color: var(--ink); }
   .contact p { color: #d9d5cc; max-width: 60ch; }
+  .contact-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
   .contact a.email {
-    display: inline-block; margin-top: 18px; text-decoration: none;
+    display: inline-block; text-decoration: none;
     font-family: "IBM Plex Mono", monospace; font-size: 14px; letter-spacing: 0.04em;
     color: var(--ink); border: 1px solid #4a4d50; border-radius: 999px; padding: 12px 22px;
   }
   .contact a.email:hover { border-color: #f0b429; color: #f0b429; }
+  .copy-email {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; letter-spacing: 0.04em;
+    color: var(--ink-soft); border: 1px solid #4a4d50; border-radius: 999px; padding: 12px 18px;
+    background: none; cursor: pointer;
+  }
+  .copy-email:hover { border-color: #f0b429; color: #f0b429; }
+  .copy-email.copied { border-color: #4caf50; color: #4caf50; }
 
   footer {
     padding: 20px; text-align: center; border-top: 1px solid var(--rule);
@@ -343,7 +351,10 @@
     <p class="kicker">Contact</p>
     <h2>Assignments &amp; Media Requests</h2>
     <p>For editorial assignments, event coverage, or image licensing. Typical response within 24 hours.</p>
-    <a class="email" href="mailto:daniel@dqdmedia.com">daniel@dqdmedia.com</a>
+    <div class="contact-row">
+      <a class="email" href="mailto:daniel@dqdmedia.com">daniel@dqdmedia.com</a>
+      <button class="copy-email" id="copyEmailBtn" type="button">Copy email</button>
+    </div>
     <p style="margin-top:14px;"><a href="https://instagram.com/dqd.media" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.04em;color:#d9d5cc;text-decoration:none;">&#64;dqd.media on Instagram &rarr;</a></p>
   </div>
 </section>
@@ -442,10 +453,17 @@
   const lbCap = document.getElementById("lbCap");
   const lbPrev = document.getElementById("lbPrev");
   const lbNext = document.getElementById("lbNext");
+  const lbClose = document.getElementById("lbClose");
 
   let lbItems = [];
   let lbIndex = 0;
   let lbRenderer = null;
+  let lbLastFocused = null;
+
+  function closeLightbox() {
+    lb.classList.remove("open");
+    if (lbLastFocused) { lbLastFocused.focus(); lbLastFocused = null; }
+  }
 
   function showLightboxAt(i) {
     lbIndex = (i + lbItems.length) % lbItems.length;
@@ -467,11 +485,13 @@
   function openLightbox(items, startIndex, renderer) {
     lbItems = items;
     lbRenderer = renderer;
+    lbLastFocused = document.activeElement;
     showLightboxAt(startIndex);
     lb.classList.add("open");
     const showNav = lbItems.length > 1;
     lbPrev.style.display = showNav ? "flex" : "none";
     lbNext.style.display = showNav ? "flex" : "none";
+    lbClose.focus();
   }
 
   lbPrev.onclick = (e) => { e.stopPropagation(); showLightboxAt(lbIndex - 1); };
@@ -553,13 +573,20 @@
     });
   }
 
-  document.getElementById("lbClose").onclick = () => lb.classList.remove("open");
-  lb.onclick = (e) => { if (e.target === lb) lb.classList.remove("open"); };
+  lbClose.onclick = () => closeLightbox();
+  lb.onclick = (e) => { if (e.target === lb) closeLightbox(); };
   document.addEventListener("keydown", (e) => {
     if (!lb.classList.contains("open")) return;
-    if (e.key === "Escape") lb.classList.remove("open");
+    if (e.key === "Escape") { closeLightbox(); return; }
     if (e.key === "ArrowLeft") showLightboxAt(lbIndex - 1);
     if (e.key === "ArrowRight") showLightboxAt(lbIndex + 1);
+    if (e.key === "Tab") {
+      const focusable = [lbClose, lbPrev, lbNext, lbLink].filter(el => el.offsetParent !== null);
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
   });
 
   const EVENTS = [
@@ -719,6 +746,37 @@
     eventView.style.display = "none";
     eventGrid.style.display = "grid";
     renderEvents();
+  };
+
+  function copyTextFallback(text) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand("copy");
+    document.body.removeChild(ta);
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).catch(() => copyTextFallback(text));
+    }
+    copyTextFallback(text);
+    return Promise.resolve();
+  }
+
+  const copyEmailBtn = document.getElementById("copyEmailBtn");
+  copyEmailBtn.onclick = () => {
+    copyText("daniel@dqdmedia.com").then(() => {
+      copyEmailBtn.textContent = "Copied!";
+      copyEmailBtn.classList.add("copied");
+      setTimeout(() => {
+        copyEmailBtn.textContent = "Copy email";
+        copyEmailBtn.classList.remove("copied");
+      }, 2000);
+    });
   };
 
   renderEvents();
