@@ -37,6 +37,8 @@
     padding: 12px 16px 10px;
     display: flex; flex-direction: column; gap: 10px;
   }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .logo { width: 40px; height: 40px; flex-shrink: 0; }
   .masthead { display: flex; flex-direction: column; gap: 1px; }
   .masthead .name {
     font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 800;
@@ -204,6 +206,7 @@
     background-position: center;
     border: 1px solid var(--rule);
   }
+  .about-logo { width: 72px; margin-top: 14px; }
   .about-text p { margin-bottom: 14px; max-width: 66ch; }
   .creds { border-top: 1px solid var(--rule); margin-top: 10px; padding-top: 14px; }
   .creds .kicker { margin-bottom: 10px; }
@@ -235,9 +238,12 @@
 <body>
 
 <header>
-  <div class="masthead">
-    <span class="name">Daniel Durgin</span>
-    <span class="beat">Fine Art &middot; Editorial &middot; Event Coverage</span>
+  <div class="brand">
+    <img class="logo" src="logo.png" alt="DQD Media logo">
+    <div class="masthead">
+      <span class="name">Daniel Durgin</span>
+      <span class="beat">Fine Art &middot; Editorial &middot; Event Coverage</span>
+    </div>
   </div>
   <nav>
     <a href="#editorial">Editorial</a>
@@ -293,6 +299,7 @@
   <h2>Daniel Durgin</h2>
   <div class="about-wrap">
     <div class="headshot" role="img" aria-label="Daniel Durgin"></div>
+    <img class="about-logo" src="logo.png" alt="DQD Media logo">
     <div class="about-text">
       <p>I'm a photographer based in Myrtle Beach, South Carolina. My fine art work spans seven ongoing series, from Carolina Coast to Experimental Processes &mdash; exactly what it sounds like. On the editorial side, I shoot sporting events and community assignments, where the job is simple: get the shot, get the caption right, don't miss the moment.</p>
       <p>Whether it's for an editor, a client, or someone who wants a print on their wall, the approach is the same &mdash; show up prepared and deliver work people can count on.</p>
