@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dqdmedia.com/sitemap.xml
