@@ -78,14 +78,25 @@
   @media (max-width: 600px) { .awards-grid { columns: 1; } }
 
   @media print {
-    body { background: #fff; color: #111; }
+    @page { margin: 0.4in; }
+    body { background: #fff; color: #111; font-size: 10px; line-height: 1.35; }
     header, footer, .actions { display: none; }
     main { max-width: none; padding: 0; }
-    .summary, .entry li, .awards-grid li { color: #222; }
-    h2.section { color: #b5342f; border-top-color: #ccc; }
-    .contact-line, .entry-meta { color: #444; }
-    .contact-line a { color: #444; }
-    .entry { break-inside: avoid; }
+    .name { font-size: 24px; }
+    .contact-line { font-size: 9.5px; margin-top: 4px; }
+    .summary { font-size: 10px; margin: 10px 0 14px; max-width: none; color: #222; }
+    .resume-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 0 26px; align-items: start; }
+    h2.section {
+      font-size: 9.5px; margin: 12px 0 6px; padding-top: 5px; color: #b5342f; border-top-color: #ccc;
+    }
+    .col-left h2.section:first-child, .col-right h2.section:first-child { margin-top: 0; }
+    .entry { margin-bottom: 8px; break-inside: avoid; }
+    .entry-title { font-size: 10.5px; }
+    .entry-meta { font-size: 8.5px; margin-top: 1px; color: #444; }
+    .contact-line a, .entry-meta { color: #444; }
+    .entry ul { margin-top: 4px; }
+    .entry li, .awards-grid li { margin-bottom: 2px; font-size: 9.5px; color: #222; }
+    .awards-grid { columns: 1; margin-bottom: 2px; }
   }
 </style>
 </head>
@@ -108,6 +119,8 @@
 
   <p class="summary">Retired U.S. Army Staff Sergeant with 18 years of leadership, operations management, and technical expertise in high-pressure environments. Experienced in project management, team coordination, and problem-solving. Skilled in digital arts, graphic design, metal fabrication, and media production. Proven ability to adapt to various industries, including law enforcement, healthcare, customer service, and entrepreneurship.</p>
 
+  <div class="resume-grid">
+  <div class="col-left">
   <h2 class="section">Work &amp; Military Experience</h2>
 
   <div class="entry">
@@ -156,7 +169,9 @@
       <li>Provided emergency response and public safety services.</li>
     </ul>
   </div>
+  </div>
 
+  <div class="col-right">
   <h2 class="section">Education</h2>
 
   <div class="entry">
@@ -215,6 +230,8 @@
     <li>Veteran Status: Retired U.S. Army (18 years of service).</li>
     <li>Entrepreneurship: Founder of DQD Media &amp; Q Fab Works, specializing in media production and custom fabrication.</li>
   </ul>
+  </div>
+  </div>
 </main>
 
 <footer class="no-print">&copy; 2026 Daniel Durgin / DQD Media</footer>
