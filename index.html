@@ -61,6 +61,22 @@
   .display { font-family: "Oswald", "Arial Narrow", sans-serif; }
   .mono { font-family: "IBM Plex Mono", Menlo, monospace; }
 
+  /* ---------- Splash ---------- */
+  .splash {
+    position: fixed; inset: 0; z-index: 300; background: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 1; transition: opacity 0.5s ease;
+  }
+  .splash.hide { opacity: 0; pointer-events: none; }
+  .splash video { width: 100%; height: 100%; object-fit: cover; }
+  .splash-skip {
+    position: absolute; bottom: 20px; right: 20px;
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.06em;
+    text-transform: uppercase; cursor: pointer; color: var(--ink);
+    background: rgba(22,21,20,0.6); border: 1px solid #4a4d50; border-radius: 999px; padding: 8px 16px;
+  }
+  .splash-skip:hover, .splash-skip:focus-visible { border-color: var(--press); color: var(--press); }
+
   /* ---------- Header ---------- */
   header {
     position: sticky; top: 0; z-index: 50;
@@ -280,6 +296,35 @@
         async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
+
+<div class="splash" id="splash">
+  <video id="splashVideo" muted playsinline poster="splash-poster.jpg"></video>
+  <button class="splash-skip" id="splashSkip" aria-label="Skip intro">Skip &rarr;</button>
+</div>
+<script>
+  (function() {
+    var splash = document.getElementById("splash");
+    var isDeepLink = /^#(portfolio|editorial)\//.test(location.hash);
+    var alreadyShown = sessionStorage.getItem("splashShown");
+    if (isDeepLink || alreadyShown) {
+      splash.remove();
+      return;
+    }
+    sessionStorage.setItem("splashShown", "1");
+    var video = document.getElementById("splashVideo");
+    var skipBtn = document.getElementById("splashSkip");
+    function closeSplash() {
+      splash.classList.add("hide");
+      setTimeout(function() { splash.remove(); }, 550);
+    }
+    video.addEventListener("ended", closeSplash);
+    video.addEventListener("error", closeSplash);
+    skipBtn.addEventListener("click", closeSplash);
+    video.src = "splash.mp4";
+    var playPromise = video.play();
+    if (playPromise && playPromise.catch) playPromise.catch(closeSplash);
+  })();
+</script>
 
 <header>
   <div class="brand">
