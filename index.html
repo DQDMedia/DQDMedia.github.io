@@ -12,11 +12,11 @@
 <meta property="og:url" content="https://dqdmedia.com/">
 <meta property="og:title" content="Daniel Durgin — Photographer & Photojournalist">
 <meta property="og:description" content="Fine art photography, editorial, and event coverage by Daniel Durgin of DQD Media, based in Myrtle Beach, SC. Prints available on paper, metal, and canvas.">
-<meta property="og:image" content="https://dqdmedia.com/hero.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://dqdmedia.com/social-logo.png">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Daniel Durgin — Photographer & Photojournalist">
 <meta name="twitter:description" content="Fine art photography, editorial, and event coverage by Daniel Durgin of DQD Media, based in Myrtle Beach, SC.">
-<meta name="twitter:image" content="https://dqdmedia.com/hero.jpg">
+<meta name="twitter:image" content="https://dqdmedia.com/social-logo.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -299,7 +299,8 @@
     var splash = document.getElementById("splash");
     var isDeepLink = /^#(portfolio|editorial)\//.test(location.hash);
     var alreadyShown = sessionStorage.getItem("splashShown");
-    if (isDeepLink || alreadyShown) {
+    var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (isDeepLink || alreadyShown || reducedMotion) {
       splash.remove();
       return;
     }
@@ -558,9 +559,11 @@
 
   function escAttr(s) { return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;"); }
   function mediaTag(s, cls, alt) {
-    return s.img
-      ? `<img class="${cls}" src="${s.img}" alt="${escAttr(alt)}" loading="lazy">`
-      : `<div class="${cls}" style="background:linear-gradient(140deg, ${s.grad[0]}, ${s.grad[1]})"></div>`;
+    if (!s.img) {
+      return `<div class="${cls}" style="background:linear-gradient(140deg, ${s.grad[0]}, ${s.grad[1]})"></div>`;
+    }
+    const thumb = s.img.replace(/\.jpg$/, "-thumb.jpg");
+    return `<img class="${cls}" src="${thumb}" srcset="${thumb} 900w, ${s.img} 2400w" sizes="(max-width: 600px) 100vw, 400px" alt="${escAttr(alt)}" loading="lazy">`;
   }
 
   function coverFor(name) {
