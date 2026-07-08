@@ -37,6 +37,7 @@
   "description": "Fine art photography, editorial, and event coverage by Daniel Durgin of DQD Media, based in Myrtle Beach, SC."
 }
 </script>
+<link rel="preload" as="image" href="hero.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500..700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -252,9 +253,7 @@
   @media (min-width: 720px) { .about-wrap { grid-template-columns: 200px 1fr; } }
   .headshot {
     width: 180px; height: 180px; border-radius: 4px;
-    background: url('about-me.png');
-    background-size: cover;
-    background-position: center;
+    object-fit: cover; display: block;
     border: 1px solid var(--rule);
   }
   .about-logo { width: 180px; margin-top: 14px; }
@@ -385,7 +384,7 @@
   <h2>Daniel Durgin</h2>
   <div class="about-wrap">
     <div>
-      <div class="headshot" role="img" aria-label="Daniel Durgin"></div>
+      <img class="headshot" src="about-me.jpg" alt="Daniel Durgin" loading="lazy">
       <img class="about-logo" src="logo.png" alt="DQD Media logo">
     </div>
     <div class="about-text">
