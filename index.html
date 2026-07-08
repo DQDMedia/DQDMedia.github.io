@@ -311,6 +311,11 @@
     font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--ink-soft); line-height: 2;
   }
+
+  img {
+    -webkit-user-select: none; user-select: none;
+    -webkit-user-drag: none; user-drag: none;
+  }
 </style>
 <script data-goatcounter="https://dqdmedia.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -451,6 +456,13 @@
 </div>
 
 <script>
+  document.addEventListener("contextmenu", (e) => {
+    if (e.target.tagName === "IMG") e.preventDefault();
+  });
+  document.addEventListener("dragstart", (e) => {
+    if (e.target.tagName === "IMG") e.preventDefault();
+  });
+
   // ----- Replace these with your real photos -----
   // Swap the "grad" gradients for image URLs later: set img:"photos/filename.jpg"
   const SHOTS = [
