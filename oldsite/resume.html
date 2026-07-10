@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Resume — Daniel Durgin</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500..700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --paper: #161514;
+    --ink: #ece8e0;
+    --ink-soft: #a8a49b;
+    --rule: #2e2c29;
+    --press: #e2524c;
+    --card: #1f1e1c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, serif;
+    line-height: 1.6;
+  }
+  header {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    padding: 16px 20px; border-bottom: 1px solid var(--rule);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand img { width: 36px; height: 36px; }
+  .brand span {
+    font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 800;
+    font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase;
+  }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.06em;
+    text-transform: uppercase; text-decoration: none; cursor: pointer;
+    border: 1px solid #4a4d50; border-radius: 999px; padding: 10px 18px; color: var(--ink);
+    background: none;
+  }
+  .btn:hover, .btn:focus-visible { border-color: var(--press); color: var(--press); }
+  main { max-width: 860px; margin: 0 auto; padding: 40px 20px 60px; }
+  .name { font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 800; font-size: clamp(32px, 6vw, 46px); text-transform: uppercase; }
+  .contact-line {
+    font-family: "IBM Plex Mono", monospace; font-size: 12.5px; letter-spacing: 0.04em;
+    color: var(--ink-soft); margin-top: 8px;
+  }
+  .contact-line a { color: var(--ink-soft); }
+  .summary { margin: 22px 0 36px; max-width: 70ch; color: var(--ink); }
+  h2.section {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--press); border-top: 1px solid var(--rule);
+    padding-top: 10px; margin: 30px 0 16px;
+  }
+  .entry { margin-bottom: 20px; }
+  .entry-title { font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 700; font-size: 17px; }
+  .entry-meta {
+    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink-soft); margin-top: 2px;
+  }
+  .entry ul { list-style: none; margin-top: 8px; }
+  .entry li { position: relative; padding-left: 16px; margin-bottom: 5px; color: var(--ink); }
+  .entry li::before { content: "—"; position: absolute; left: 0; color: var(--ink-soft); }
+  .awards-grid { columns: 2; column-gap: 40px; }
+  .awards-grid li { position: relative; padding-left: 16px; margin-bottom: 6px; break-inside: avoid; color: var(--ink); }
+  .awards-grid li::before { content: "—"; position: absolute; left: 0; color: var(--ink-soft); }
+  .awards-grid { list-style: none; }
+  footer { text-align: center; padding: 20px; border-top: 1px solid var(--rule);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+
+  @media (max-width: 600px) { .awards-grid { columns: 1; } }
+
+  @media print {
+    @page { margin: 0.4in; }
+    body { background: #fff; color: #111; font-size: 10px; line-height: 1.35; }
+    header, footer, .actions { display: none; }
+    main { max-width: none; padding: 0; }
+    .name { font-size: 24px; }
+    .contact-line { font-size: 9.5px; margin-top: 4px; }
+    .summary { font-size: 10px; margin: 10px 0 14px; max-width: none; color: #222; }
+    .resume-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 0 26px; align-items: start; }
+    h2.section {
+      font-size: 9.5px; margin: 12px 0 6px; padding-top: 5px; color: #b5342f; border-top-color: #ccc;
+    }
+    .col-left h2.section:first-child, .col-right h2.section:first-child { margin-top: 0; }
+    .entry { margin-bottom: 8px; break-inside: avoid; }
+    .entry-title { font-size: 10.5px; }
+    .entry-meta { font-size: 8.5px; margin-top: 1px; color: #444; }
+    .contact-line a, .entry-meta { color: #444; }
+    .entry ul { margin-top: 4px; }
+    .entry li, .awards-grid li { margin-bottom: 2px; font-size: 9.5px; color: #222; }
+    .awards-grid { columns: 1; margin-bottom: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="no-print">
+  <a class="brand" href="/">
+    <img src="logo.png" alt="DQD Media logo">
+    <span>Daniel Durgin</span>
+  </a>
+  <div class="actions">
+    <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+    <a class="btn" href="/">&larr; Back to site</a>
+  </div>
+</header>
+
+<main>
+  <h1 class="name">Daniel Durgin</h1>
+  <p class="contact-line">Myrtle Beach, SC 29588 &middot; 843.281.7322 &middot; <a href="mailto:daniel@dqdmedia.com">daniel@dqdmedia.com</a> &middot; <a href="https://dqdmedia.com">dqdmedia.com</a></p>
+
+  <p class="summary">Retired U.S. Army Staff Sergeant with 18 years of leadership, operations management, and technical expertise in high-pressure environments. Experienced in project management, team coordination, and problem-solving. Skilled in digital arts, graphic design, metal fabrication, and media production. Proven ability to adapt to various industries, including law enforcement, healthcare, customer service, and entrepreneurship.</p>
+
+  <div class="resume-grid">
+  <div class="col-left">
+  <h2 class="section">Work &amp; Military Experience</h2>
+
+  <div class="entry">
+    <div class="entry-title">DQD Media / Q Fab Works &mdash; Myrtle Beach, SC</div>
+    <div class="entry-meta">Owner &middot; 2023 &ndash; Present</div>
+    <ul>
+      <li>Provide professional photography, videography, and graphic design services.</li>
+      <li>Design and fabricate custom metal art and signs.</li>
+      <li>Manage business operations, client relations, and project execution.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title">United States Army (Retired)</div>
+    <div class="entry-meta">Staff Sergeant (SSG) &middot; 2001 &ndash; 2019</div>
+    <ul>
+      <li>Led and managed a platoon of 24 soldiers, ensuring mission readiness and effectiveness.</li>
+      <li>Oversaw maintenance and recovery operations, troubleshooting military vehicles and equipment.</li>
+      <li>Deployed to Iraq (Feb 2003 &ndash; Sept 2004) and Afghanistan (Mar 2012 &ndash; Mar 2013) in support of combat operations.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title">Apple Inc. &mdash; Myrtle Beach, SC</div>
+    <div class="entry-meta">At Home Advisor &middot; 2014 &ndash; 2015</div>
+    <ul>
+      <li>Provided customer support and troubleshooting for Apple products and services.</li>
+      <li>Assisted customers in resolving technical issues and improving user experience.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title">Tuomey Medical Center &mdash; Sumter, SC</div>
+    <div class="entry-meta">Cardiac Monitor Technician &middot; 2009 &ndash; 2011</div>
+    <ul>
+      <li>Monitored and analyzed the heart rhythms of up to 40 patients simultaneously.</li>
+      <li>Assisted medical professionals in early detection and response to cardiac events.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title">South Carolina Highway Patrol &mdash; Charleston, SC</div>
+    <div class="entry-meta">Trooper &middot; 2007 &ndash; 2008</div>
+    <ul>
+      <li>Enforced South Carolina traffic laws and conducted accident investigations.</li>
+      <li>Provided emergency response and public safety services.</li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="col-right">
+  <h2 class="section">Education</h2>
+
+  <div class="entry">
+    <div class="entry-title">Coastal Carolina University</div>
+    <ul>
+      <li>Bachelor of Arts &mdash; Graphic Design, w/ Photography &amp; Art Studio minors (in progress) &middot; 2027</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title">Horry-Georgetown Technical College</div>
+    <ul>
+      <li>Associate in Applied Science &mdash; Digital Arts &middot; 2025</li>
+      <li>Associate in Applied Science &mdash; General Technology (Welding Technology) &middot; 2023</li>
+      <li>Certificate in Applied Science &mdash; Advanced Welding Technology &middot; 2023</li>
+      <li>Certificate in Applied Science &mdash; Basic Business &middot; 2023</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title">South Carolina Criminal Justice Academy</div>
+    <ul>
+      <li>Law Enforcement &mdash; Class One Certification &middot; 2007</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-title">U.S. Army Training &amp; Certifications</div>
+    <ul>
+      <li>Instructor Training &middot; 2013</li>
+      <li>MRAP Trainer Certification &middot; 2011</li>
+      <li>M2 .50 Cal &amp; MK19 Trainer Certification &middot; 2009</li>
+      <li>SAMS-E Operation &middot; 2007</li>
+    </ul>
+  </div>
+
+  <h2 class="section">Awards &amp; Honors</h2>
+  <ul class="awards-grid">
+    <li>Magna Cum Laude &mdash; A.A.S. General Technology (3.75 GPA), 2023</li>
+    <li>Cum Laude &mdash; A.A.S. Digital Arts (3.5 GPA), 2025</li>
+    <li>President's List (2x), 2020&ndash;2025</li>
+    <li>Dean's List (3x), 2020&ndash;2026</li>
+    <li>SC Criminal Justice Academy Honor Graduate, 2007</li>
+    <li>U.S. Army A.I.T. Honor Graduate, 2002</li>
+    <li>Member, Phi Theta Kappa National Honor Society</li>
+    <li>Army Commendation Medal (2x)</li>
+    <li>Non-Commissioned Officer Professional Development Award</li>
+    <li>National Defense Service Medal</li>
+    <li>Overseas Service Award</li>
+    <li>Global War on Terrorism Service &amp; Expeditionary Medals</li>
+  </ul>
+
+  <h2 class="section">Additional Information</h2>
+  <ul class="awards-grid">
+    <li>Security Clearance: Previously held (eligible for renewal).</li>
+    <li>Veteran Status: Retired U.S. Army (18 years of service).</li>
+    <li>Entrepreneurship: Founder of DQD Media &amp; Q Fab Works, specializing in media production and custom fabrication.</li>
+  </ul>
+  </div>
+  </div>
+</main>
+
+<footer class="no-print">
+  <a class="btn" href="/">&larr; Back to site</a>
+  <p style="margin-top:14px;">&copy; 2026 Daniel Durgin / DQD Media</p>
+</footer>
+
+</body>
+</html>

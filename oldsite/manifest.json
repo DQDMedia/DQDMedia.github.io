@@ -1,0 +1,15 @@
+{
+  "name": "DQD Media — Daniel Durgin Photography",
+  "short_name": "DQD Media",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#161514",
+  "theme_color": "#161514",
+  "description": "Fine art photography, editorial, and event coverage by Daniel Durgin of DQD Media, based in Myrtle Beach, SC.",
+  "icons": [
+    { "src": "favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "social-logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

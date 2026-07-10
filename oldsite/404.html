@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Page Not Found — Daniel Durgin</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500..700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --paper: #161514;
+    --ink: #ece8e0;
+    --ink-soft: #a8a49b;
+    --rule: #2e2c29;
+    --press: #e2524c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .logo { width: 64px; height: 64px; margin-bottom: 20px; }
+  .slug {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--press); margin-bottom: 10px;
+  }
+  h1 {
+    font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 700;
+    font-size: clamp(28px, 6vw, 44px); text-transform: uppercase; letter-spacing: 0.01em;
+    margin-bottom: 14px;
+  }
+  p { color: var(--ink-soft); max-width: 44ch; margin-bottom: 26px; font-size: 16px; }
+  a.home {
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; letter-spacing: 0.06em;
+    text-transform: uppercase; text-decoration: none; color: var(--ink);
+    border: 1px solid #4a4d50; border-radius: 999px; padding: 12px 24px;
+  }
+  a.home:hover, a.home:focus-visible { border-color: var(--press); color: var(--press); }
+</style>
+</head>
+<body>
+  <img class="logo" src="logo.png" alt="DQD Media logo">
+  <p class="slug">Error 404</p>
+  <h1>Frame Not Found</h1>
+  <p>The page you're looking for doesn't exist &mdash; it may have moved, or the link was mistyped.</p>
+  <a class="home" href="/">&larr; Back to the homepage</a>
+</body>
+</html>
