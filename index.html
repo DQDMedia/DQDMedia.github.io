@@ -64,7 +64,7 @@
   "description": "Fine art photography, event coverage, video, and portfolio services by Daniel Durgin of DQD Media, based in Myrtle Beach, SC."
 }
 </script>
-<link rel="preload" as="image" href="photos/portfolio/bench-swing-silhouette.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="photos/fineart/carolina-coast/intracoastal-sunset-thumb.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500..700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -169,16 +169,16 @@
 </header>
 
 <nav class="doors" aria-label="Sections">
-  <a class="door" href="/fine-art/" style="background-image:url('photos/fineart/carolina-coast/intracoastal-sunset.jpg')">
+  <a class="door" id="doorFineArt" href="/fine-art/" style="background-image:url('photos/fineart/carolina-coast/intracoastal-sunset-thumb.jpg')">
     <span class="door-label"><h2>Fine Art</h2><span>Prints on paper, metal &amp; canvas</span></span>
   </a>
-  <a class="door" href="/events/" style="background-image:url('photos/events/2026-06-24-morocco-haiti/756A0267.jpg')">
+  <a class="door" id="doorEvents" href="/events/" style="background-image:url('photos/events/2026-06-24-morocco-haiti/756A0267-thumb.jpg')">
     <span class="door-label"><h2>Events</h2><span>Assignment &amp; event coverage</span></span>
   </a>
   <a class="door video" href="/video/">
     <span class="door-label"><h2>Video</h2><span>Short films &amp; edits</span></span>
   </a>
-  <a class="door" href="/portfolio/" style="background-image:url('photos/portfolio/bench-swing-silhouette.jpg')">
+  <a class="door" id="doorPortfolio" href="/portfolio/" style="background-image:url('photos/portfolio/bench-swing-silhouette-thumb.jpg')">
     <span class="door-label"><h2>Portfolio</h2><span>The range of the work</span></span>
   </a>
 </nav>
@@ -212,6 +212,54 @@
     copyTextFallback(text);
     return Promise.resolve();
   }
+  const FINE_ART_COVERS = [
+    "photos/fineart/carolina-coast/intracoastal-sunset-thumb.jpg",
+    "photos/fineart/carolina-after-dark/surfside-pier-blue-hour-thumb.jpg",
+    "photos/fineart/experimental-processes/chemigram-green-current-thumb.jpg",
+    "photos/fineart/black-and-white/pasture-fence-thumb.jpg",
+    "photos/fineart/aerial-perspectives/waccamaw-river-winter-boat-thumb.jpg",
+    "photos/fineart/wildlife/alligator-huntington-beach-thumb.jpg",
+    "photos/fineart/motion-and-energy/fourth-of-july-fireworks-thumb.jpg",
+  ];
+
+  const PORTFOLIO_COVERS = [
+    "photos/portfolio/world-cup-diving-save-thumb.jpg",
+    "photos/portfolio/baby-portrait-window-light-thumb.jpg",
+    "photos/portfolio/bench-swing-silhouette-thumb.jpg",
+    "photos/portfolio/swing-set-mother-child-thumb.jpg",
+    "photos/portfolio/father-children-basketball-thumb.jpg",
+    "photos/portfolio/monkey-bars-golden-hour-thumb.jpg",
+    "photos/portfolio/snowfall-portrait-thumb.jpg",
+    "photos/portfolio/snowfall-night-portrait-thumb.jpg",
+    "photos/portfolio/dog-portrait-thumb.jpg",
+    "photos/portfolio/camouflaged-lizard-thumb.jpg",
+    "photos/portfolio/night-aerial-pier-thumb.jpg",
+    "photos/portfolio/ferris-wheel-blue-sky-thumb.jpg",
+    "photos/portfolio/vintage-vw-buses-thumb.jpg",
+    "photos/portfolio/storm-pier-black-white-thumb.jpg",
+    "photos/portfolio/moonlit-river-landscape-thumb.jpg",
+    "photos/portfolio/moonrise-detail-thumb.jpg",
+    "photos/portfolio/waterway-sunset-wide-thumb.jpg",
+    "photos/portfolio/sunset-water-abstract-thumb.jpg",
+    "photos/portfolio/sand-and-glass-macro-thumb.jpg",
+    "photos/portfolio/sketching-outdoors-black-white-thumb.jpg",
+    "photos/portfolio/lily-black-white-thumb.jpg",
+    "photos/portfolio/lumen-print-botanical-thumb.jpg",
+    "photos/portfolio/light-painting-triptych-thumb.jpg",
+  ];
+
+  const EVENTS_META = [
+    { date: "2026-06-24", cover: "photos/events/2026-06-24-morocco-haiti/756A0267-thumb.jpg" },
+    { date: "2024-03-02", cover: "photos/events/2024-03-02-hgtc-foundation-gala/756A0147-thumb.jpg" },
+  ];
+
+  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+  document.getElementById("doorFineArt").style.backgroundImage = `url('${pick(FINE_ART_COVERS)}')`;
+  document.getElementById("doorPortfolio").style.backgroundImage = `url('${pick(PORTFOLIO_COVERS)}')`;
+  const mostRecentEvent = EVENTS_META.slice().sort((a, b) => b.date.localeCompare(a.date))[0];
+  document.getElementById("doorEvents").style.backgroundImage = `url('${mostRecentEvent.cover}')`;
+
   const copyEmailBtn = document.getElementById("copyEmailBtn");
   copyEmailBtn.onclick = () => {
     copyText("daniel@dqdmedia.com").then(() => {
