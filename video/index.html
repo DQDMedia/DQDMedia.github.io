@@ -27,6 +27,13 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: var(--paper); color: var(--ink); font-family: "Source Serif 4", Georgia, serif; }
+  .splash {
+    position: fixed; inset: 0; z-index: 300; background: var(--paper); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 1; transition: opacity 0.5s ease;
+  }
+  .splash.hide { opacity: 0; pointer-events: none; }
+  .splash video { width: 100%; height: 100%; object-fit: cover; }
   header {
     display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
     padding: 20px 24px; border-bottom: 1px solid var(--rule);
@@ -52,6 +59,36 @@
         async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
+
+<div class="splash" id="splash" role="button" aria-label="Skip intro" tabindex="0">
+  <video id="splashVideo" muted playsinline poster="/splash-poster.jpg"></video>
+</div>
+<script>
+  (function() {
+    var splash = document.getElementById("splash");
+    var alreadyShown = sessionStorage.getItem("videoSplashShown");
+    var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (alreadyShown || reducedMotion) {
+      splash.remove();
+      return;
+    }
+    sessionStorage.setItem("videoSplashShown", "1");
+    var video = document.getElementById("splashVideo");
+    function closeSplash() {
+      splash.classList.add("hide");
+      setTimeout(function() { splash.remove(); }, 550);
+    }
+    video.addEventListener("ended", closeSplash);
+    video.addEventListener("error", closeSplash);
+    splash.addEventListener("click", closeSplash);
+    splash.addEventListener("keydown", function(e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); closeSplash(); }
+    });
+    video.src = "/splash.mp4";
+    var playPromise = video.play();
+    if (playPromise && playPromise.catch) playPromise.catch(closeSplash);
+  })();
+</script>
 
 <header>
   <a class="brand" href="/">
