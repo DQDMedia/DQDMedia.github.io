@@ -223,6 +223,7 @@
   ];
 
   const PORTFOLIO_COVERS = [
+    "photos/portfolio/world-cup-diving-save-thumb.jpg",
     "photos/portfolio/baby-portrait-window-light-thumb.jpg",
     "photos/portfolio/bench-swing-silhouette-thumb.jpg",
     "photos/portfolio/swing-set-mother-child-thumb.jpg",
@@ -252,10 +253,21 @@
     { date: "2024-03-02", cover: "photos/events/2024-03-02-hgtc-foundation-gala/756A0147-thumb.jpg" },
   ];
 
+  // Same photo appears in both galleries under different filenames — never show it as both covers at once.
+  const SAME_PHOTO_IN_BOTH_GALLERIES = {
+    "photos/fineart/carolina-coast/intracoastal-sunset-thumb.jpg": "photos/portfolio/waterway-sunset-wide-thumb.jpg",
+  };
+
   function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
 
-  document.getElementById("doorFineArt").style.backgroundImage = `url('${pick(FINE_ART_COVERS)}')`;
-  document.getElementById("doorPortfolio").style.backgroundImage = `url('${pick(PORTFOLIO_COVERS)}')`;
+  const fineArtPick = pick(FINE_ART_COVERS);
+  let portfolioPick = pick(PORTFOLIO_COVERS);
+  if (SAME_PHOTO_IN_BOTH_GALLERIES[fineArtPick] === portfolioPick) {
+    portfolioPick = pick(PORTFOLIO_COVERS.filter((p) => p !== portfolioPick));
+  }
+
+  document.getElementById("doorFineArt").style.backgroundImage = `url('${fineArtPick}')`;
+  document.getElementById("doorPortfolio").style.backgroundImage = `url('${portfolioPick}')`;
   const mostRecentEvent = EVENTS_META.slice().sort((a, b) => b.date.localeCompare(a.date))[0];
   document.getElementById("doorEvents").style.backgroundImage = `url('${mostRecentEvent.cover}')`;
 
