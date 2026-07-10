@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Portfolio — Daniel Durgin</title>
+<meta name="description" content="A cross-section of work by Daniel Durgin of DQD Media — portraits, documentary, sports, wildlife, aerial, and alternative-process photography.">
+<link rel="canonical" href="https://dqdmedia.com/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dqdmedia.com/portfolio/">
+<meta property="og:title" content="Portfolio — Daniel Durgin">
+<meta property="og:description" content="A cross-section of work by Daniel Durgin of DQD Media.">
+<meta property="og:image" content="https://dqdmedia.com/social-logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#161514">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500..700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --paper: #161514; --ink: #ece8e0; --ink-soft: #a8a49b;
+    --rule: #2e2c29; --press: #e2524c; --card: #1f1e1c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  img { -webkit-user-select: none; user-select: none; -webkit-user-drag: none; user-drag: none; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Serif 4", Georgia, serif; }
+  header {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    padding: 20px 24px; border-bottom: 1px solid var(--rule);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand img { width: 32px; height: 32px; }
+  .brand span { font-family: "Oswald", sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 0.02em; text-transform: uppercase; }
+  .back { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; }
+  .back:hover { color: var(--press); }
+  main { max-width: 1200px; margin: 0 auto; padding: 60px 24px 40px; }
+  .page-title { font-family: "Oswald", sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 44px); text-transform: uppercase; margin-bottom: 8px; }
+  .page-sub { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-soft); letter-spacing: 0.04em; margin-bottom: 56px; }
+  .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .shot { border: none; background: none; cursor: pointer; text-align: left; padding: 0; display: block; width: 100%; }
+  .shot-img { height: 260px; width: 100%; object-fit: cover; display: block; border-radius: 2px; }
+
+  .lightbox { position: fixed; inset: 0; z-index: 100; display: none; background: rgba(5,5,4,0.94); align-items: center; justify-content: center; padding: 20px; }
+  .lightbox.open { display: flex; }
+  .lb-card { max-width: 720px; width: 100%; }
+  .lb-img { height: min(58vh, 460px); width: 100%; border-radius: 4px; object-fit: contain; display: block; }
+  .lb-cap { font-family: "IBM Plex Mono", monospace; font-size: 12px; line-height: 1.6; color: #e6e1d5; margin-top: 12px; }
+  .lb-close { position: absolute; top: 16px; right: 16px; background: none; border: 1px solid #555; color: #ddd; border-radius: 999px; width: 38px; height: 38px; font-size: 17px; cursor: pointer; }
+  .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(20,19,17,0.6); border: 1px solid #555; color: #ddd; border-radius: 999px; width: 44px; height: 44px; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .lb-nav:hover, .lb-nav:focus-visible { border-color: #f0b429; color: #f0b429; }
+  .lb-prev { left: 10px; }
+  .lb-next { right: 10px; }
+  @media (min-width: 760px) { .lb-prev { left: 24px; } .lb-next { right: 24px; } }
+
+  footer { text-align: center; padding: 30px 20px; border-top: 1px solid var(--rule); font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+</style>
+<script data-goatcounter="https://dqdmedia.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="/">
+    <img src="/logo.png" alt="DQD Media logo">
+    <span>Daniel Durgin</span>
+  </a>
+  <a class="back" href="/">&larr; All sections</a>
+</header>
+
+<main>
+  <h1 class="page-title">Portfolio</h1>
+  <p class="page-sub">The range of the work — portraits, documentary, sports, wildlife, aerial &amp; alternative process.</p>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>&copy; 2026 Daniel Durgin / DQD Media<br>All images &copy; the photographer</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">&#10005;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image">&#8249;</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next image">&#8250;</button>
+  <div class="lb-card">
+    <img class="lb-img" id="lbImg" alt="">
+    <p class="lb-cap" id="lbCap"></p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("contextmenu", (e) => { if (e.target.tagName === "IMG") e.preventDefault(); });
+  document.addEventListener("dragstart", (e) => { if (e.target.tagName === "IMG") e.preventDefault(); });
+
+  const PHOTOS = [
+    { img: "/photos/portfolio/world-cup-diving-save.jpg", cap: "A diving save at the goalmouth, FIFA World Cup Group C — Morocco v Haiti, Mercedes-Benz Stadium." },
+    { img: "/photos/portfolio/baby-portrait-window-light.jpg", cap: "A quiet moment of light and curiosity." },
+    { img: "/photos/portfolio/bench-swing-silhouette.jpg", cap: "Two figures pause together at the water's edge." },
+    { img: "/photos/portfolio/swing-set-mother-child.jpg", cap: "A mother and child share a quiet moment on the swings." },
+    { img: "/photos/portfolio/father-children-basketball.jpg", cap: "A father steadies his son mid-game." },
+    { img: "/photos/portfolio/monkey-bars-golden-hour.jpg", cap: "Backlit joy on the playground at golden hour." },
+    { img: "/photos/portfolio/snowfall-portrait.jpg", cap: "A child pauses in falling snow." },
+    { img: "/photos/portfolio/snowfall-night-portrait.jpg", cap: "A portrait caught mid-snowfall, lit from within." },
+    { img: "/photos/portfolio/dog-portrait.jpg", cap: "A close portrait, ears up and alert." },
+    { img: "/photos/portfolio/camouflaged-lizard.jpg", cap: "An anole blends into the leaves, barely visible." },
+    { img: "/photos/portfolio/night-aerial-pier.jpg", cap: "An aerial view of the pier lit against the night." },
+    { img: "/photos/portfolio/ferris-wheel-blue-sky.jpg", cap: "The wheel turns against a clear afternoon sky." },
+    { img: "/photos/portfolio/vintage-vw-buses.jpg", cap: "Four retired Volkswagen buses, weathered and colorful." },
+    { img: "/photos/portfolio/storm-pier-black-white.jpg", cap: "Waves break beneath the pier as a storm rolls in." },
+    { img: "/photos/portfolio/moonlit-river-landscape.jpg", cap: "Moonlight traces a path across still water." },
+    { img: "/photos/portfolio/moonrise-detail.jpg", cap: "The moon's surface, caught in sharp detail." },
+    { img: "/photos/portfolio/waterway-sunset-wide.jpg", cap: "A boat runs the waterway as the sky catches fire." },
+    { img: "/photos/portfolio/sunset-water-abstract.jpg", cap: "Sunset color dissolves into abstraction on moving water." },
+    { img: "/photos/portfolio/sand-and-glass-macro.jpg", cap: "Sea glass and sand grains, magnified." },
+    { img: "/photos/portfolio/sketching-outdoors-black-white.jpg", cap: "An artist sketches quietly in the shade." },
+    { img: "/photos/portfolio/lily-black-white.jpg", cap: "A lily opens in soft monochrome light." },
+    { img: "/photos/portfolio/lumen-print-botanical.jpg", cap: "A lumen print, sun-exposed directly onto photo paper." },
+    { img: "/photos/portfolio/light-painting-triptych.jpg", cap: "A single gesture of light, rendered three ways." },
+  ];
+
+  function escAttr(s) { return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;"); }
+  function thumbOf(img) { return img.replace(/\.jpg$/, "-thumb.jpg"); }
+
+  const grid = document.getElementById("grid");
+  PHOTOS.forEach((s, i) => {
+    const btn = document.createElement("button");
+    btn.className = "shot";
+    btn.innerHTML = `<img class="shot-img" src="${thumbOf(s.img)}" srcset="${thumbOf(s.img)} 900w, ${s.img} 2400w" sizes="(max-width: 600px) 100vw, 380px" alt="${escAttr(s.cap)}" loading="lazy">`;
+    btn.onclick = () => openLightbox(i);
+    grid.appendChild(btn);
+  });
+
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lbImg");
+  const lbCap = document.getElementById("lbCap");
+  const lbPrev = document.getElementById("lbPrev");
+  const lbNext = document.getElementById("lbNext");
+  const lbClose = document.getElementById("lbClose");
+  let lbIndex = 0;
+  let lbLastFocused = null;
+
+  function closeLightbox() {
+    lb.classList.remove("open");
+    if (lbLastFocused) { lbLastFocused.focus(); lbLastFocused = null; }
+  }
+  function showLightboxAt(i) {
+    lbIndex = (i + PHOTOS.length) % PHOTOS.length;
+    const s = PHOTOS[lbIndex];
+    lbImg.src = s.img;
+    lbImg.alt = s.cap;
+    lbCap.textContent = s.cap;
+  }
+  function openLightbox(startIndex) {
+    lbLastFocused = document.activeElement;
+    showLightboxAt(startIndex);
+    lb.classList.add("open");
+    lbClose.focus();
+  }
+  lbPrev.onclick = (e) => { e.stopPropagation(); showLightboxAt(lbIndex - 1); };
+  lbNext.onclick = (e) => { e.stopPropagation(); showLightboxAt(lbIndex + 1); };
+  lbClose.onclick = () => closeLightbox();
+  lb.addEventListener("click", (e) => { if (e.target === lb) closeLightbox(); });
+
+  let lbTouchStartX = null;
+  lb.addEventListener("touchstart", (e) => { lbTouchStartX = e.changedTouches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", (e) => {
+    if (lbTouchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - lbTouchStartX;
+    if (Math.abs(dx) > 40) { dx > 0 ? showLightboxAt(lbIndex - 1) : showLightboxAt(lbIndex + 1); }
+    lbTouchStartX = null;
+  }, { passive: true });
+
+  document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") showLightboxAt(lbIndex - 1);
+    if (e.key === "ArrowRight") showLightboxAt(lbIndex + 1);
+    if (e.key === "Tab") {
+      const focusable = [lbClose, lbPrev, lbNext].filter(el => el.offsetParent !== null);
+      const idx = focusable.indexOf(document.activeElement);
+      e.preventDefault();
+      const next = e.shiftKey ? (idx - 1 + focusable.length) % focusable.length : (idx + 1) % focusable.length;
+      focusable[next].focus();
+    }
+  });
+</script>
+
+</body>
+</html>

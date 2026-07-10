@@ -4,22 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
-<title>Daniel Durgin — Photographer & Photojournalist</title>
-<meta name="description" content="Fine art photography, editorial, and event coverage by Daniel Durgin of DQD Media, based in Myrtle Beach, SC. Prints available on paper, metal, and canvas.">
+<title>Daniel Durgin — Photographer & Videographer</title>
+<meta name="description" content="Fine art photography, event coverage, video, and portfolio work by Daniel Durgin of DQD Media, based in Myrtle Beach, SC.">
 <meta name="google-site-verification" content="7vjVPcgsWfcT9jCPMvn5O-IMRKkh0S7Lrlb7DfIxrrM">
 <link rel="icon" type="image/png" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#161514">
-<meta property="og:type" content="website">
 <link rel="canonical" href="https://dqdmedia.com/">
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://dqdmedia.com/">
-<meta property="og:title" content="Daniel Durgin — Photographer & Photojournalist">
-<meta property="og:description" content="Fine art photography, editorial, and event coverage by Daniel Durgin of DQD Media, based in Myrtle Beach, SC. Prints available on paper, metal, and canvas.">
+<meta property="og:title" content="Daniel Durgin — Photographer & Videographer">
+<meta property="og:description" content="Fine art photography, event coverage, video, and portfolio work by Daniel Durgin of DQD Media, based in Myrtle Beach, SC.">
 <meta property="og:image" content="https://dqdmedia.com/social-logo.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Daniel Durgin — Photographer & Photojournalist">
-<meta name="twitter:description" content="Fine art photography, editorial, and event coverage by Daniel Durgin of DQD Media, based in Myrtle Beach, SC.">
+<meta name="twitter:title" content="Daniel Durgin — Photographer & Videographer">
+<meta name="twitter:description" content="Fine art photography, event coverage, video, and portfolio work by Daniel Durgin of DQD Media, based in Myrtle Beach, SC.">
 <meta name="twitter:image" content="https://dqdmedia.com/social-logo.png">
 <script type="application/ld+json">
 {
@@ -38,7 +38,7 @@
     "addressRegion": "SC",
     "addressCountry": "US"
   },
-  "description": "Fine art photography, editorial, and event coverage by Daniel Durgin of DQD Media, based in Myrtle Beach, SC."
+  "description": "Fine art photography, event coverage, video, and portfolio work by Daniel Durgin of DQD Media, based in Myrtle Beach, SC."
 }
 </script>
 <script type="application/ld+json">
@@ -61,260 +61,100 @@
   },
   "areaServed": "Grand Strand, SC",
   "sameAs": ["https://instagram.com/dqd.media"],
-  "description": "Fine art photography, editorial, and event coverage services by Daniel Durgin of DQD Media, based in Myrtle Beach, SC."
+  "description": "Fine art photography, event coverage, video, and portfolio services by Daniel Durgin of DQD Media, based in Myrtle Beach, SC."
 }
 </script>
-<link rel="preload" as="image" href="hero.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="photos/portfolio/bench-swing-silhouette.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500..700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     color-scheme: dark;
-    --paper: #161514;         /* page background: warm charcoal */
-    --ink: #ece8e0;           /* primary text: warm off-white */
-    --ink-soft: #a8a49b;      /* secondary text */
-    --rule: #2e2c29;          /* hairlines */
-    --press: #e2524c;         /* wire-desk red, brightened for dark bg */
-    --card: #1f1e1c;          /* cards: one step lighter than page */
+    --paper: #161514;
+    --ink: #ece8e0;
+    --ink-soft: #a8a49b;
+    --rule: #2e2c29;
+    --press: #e2524c;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  img { -webkit-user-select: none; user-select: none; -webkit-user-drag: none; user-drag: none; }
   body {
     background: var(--paper);
     color: var(--ink);
     font-family: "Source Serif 4", Georgia, serif;
-    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
-  .display { font-family: "Oswald", "Arial Narrow", sans-serif; }
-  .mono { font-family: "IBM Plex Mono", Menlo, monospace; }
-
-  /* ---------- Splash ---------- */
-  .splash {
-    position: fixed; inset: 0; z-index: 300; background: var(--paper);
-    display: flex; align-items: center; justify-content: center;
-    opacity: 1; transition: opacity 0.5s ease;
-  }
-  .splash.hide { opacity: 0; pointer-events: none; }
-  .splash { cursor: pointer; }
-  .splash video { width: 100%; height: 100%; object-fit: cover; }
-
-  /* ---------- Header ---------- */
   header {
-    position: sticky; top: 0; z-index: 50;
-    background: var(--paper);
-    border-bottom: 1px solid var(--rule);
-    padding: 12px 16px 10px;
-    display: flex; flex-direction: column; gap: 10px;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    text-align: center; padding: 56px 20px 40px;
   }
-  .brand { display: flex; align-items: center; gap: 10px; }
-  .logo { width: 40px; height: 40px; flex-shrink: 0; }
-  .masthead { display: flex; flex-direction: column; gap: 1px; }
-  .masthead .name {
-    font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 800;
-    font-size: 21px; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.1;
-  }
-  .masthead .beat {
-    font-family: "IBM Plex Mono", monospace; font-size: 9.5px; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--press); white-space: nowrap;
-  }
-  nav { display: flex; width: 100%; border-top: 1px solid var(--rule); padding-top: 8px; }
-  nav a {
-    flex: 1; text-align: center; white-space: nowrap;
-    font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.06em;
-    text-transform: uppercase; text-decoration: none; color: var(--ink-soft);
-    padding: 6px 2px; border-radius: 3px;
-  }
-  @media (min-width: 760px) {
-    header { flex-direction: row; align-items: center; justify-content: space-between; padding: 14px 20px; }
-    nav { width: auto; border-top: none; padding-top: 0; gap: 4px; }
-    nav a { flex: none; padding: 6px 10px; }
-  }
-  nav a:hover, nav a:focus-visible { color: var(--ink); background: #262421; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--press); outline-offset: 2px; }
-
-  /* ---------- Hero ---------- */
-  .hero { border-bottom: 1px solid var(--rule); }
-  .hero-img {
-    height: min(62vh, 560px);
-    background: url('hero.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex; align-items: flex-end;
-  }
-  .hero-overlay {
-    width: 100%; padding: 24px 20px;
-    background: linear-gradient(transparent, rgba(10,12,14,0.72));
-    color: #f2efe9;
-  }
-  .hero-overlay h1 {
-    font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 800;
-    font-size: clamp(30px, 6vw, 56px); line-height: 1.05; text-transform: uppercase;
-    letter-spacing: 0.01em; max-width: 16ch;
-  }
-  .wirecap {
-    font-family: "IBM Plex Mono", monospace; font-size: 11px; line-height: 1.5;
-    letter-spacing: 0.02em; color: #e6e1d5; margin-top: 10px; max-width: 62ch;
-  }
-  .wirecap .slug { color: #f0b429; font-weight: 500; }
-
-  .hero-strip {
-    display: flex; flex-wrap: wrap; gap: 6px 22px; padding: 12px 20px;
-    font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-soft);
-  }
-  .hero-strip b { color: var(--press); font-weight: 500; }
-
-  /* ---------- Sections ---------- */
-  section { padding: 48px 20px; max-width: 1080px; margin: 0 auto; }
-  .kicker {
-    font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--press); margin-bottom: 6px;
-  }
-  h2 {
+  header img.logo { width: 46px; height: 46px; margin-bottom: 16px; }
+  header h1 {
     font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 700;
-    font-size: clamp(24px, 4vw, 34px); text-transform: uppercase; letter-spacing: 0.01em;
-    margin-bottom: 8px;
+    font-size: clamp(24px, 4vw, 34px); letter-spacing: 0.01em; text-transform: uppercase;
   }
-  .section-note { color: var(--ink-soft); max-width: 62ch; margin-bottom: 26px; font-size: 16px; }
-
-  /* ---------- Essays (editorial) ---------- */
-  .essays { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
-  .essay {
-    background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
-    overflow: hidden; text-decoration: none; color: inherit; display: block;
+  header p {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-soft); margin-top: 10px;
   }
-  .essay:hover .essay-img { filter: saturate(1.15); }
-  .essay-img { height: 190px; width: 100%; object-fit: cover; display: block; }
-  .essay-body { padding: 14px 16px 18px; }
-  .essay-tag {
-    font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--press);
+  .doors {
+    flex: 1;
+    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+    gap: 2px; min-height: 60vh;
   }
-  .essay-body h3 {
-    font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 700;
-    font-size: 19px; margin: 4px 0 6px; line-height: 1.2;
+  .door {
+    position: relative; overflow: hidden; text-decoration: none; display: block;
+    background: var(--paper) center/cover no-repeat;
   }
-  .essay-body p { font-size: 14.5px; color: var(--ink-soft); }
-  .essay-body .wire {
-    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; line-height: 1.6;
-    color: var(--ink-soft);
+  .door::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(22,21,20,0.05) 0%, rgba(22,21,20,0.75) 100%);
+    transition: background 0.25s ease;
   }
-  .essay-body .wire .slug { color: var(--press); font-weight: 500; }
-
-  /* ---------- Portfolio ---------- */
-  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
-  .filters button {
-    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.06em;
-    text-transform: uppercase; padding: 8px 14px; border-radius: 999px; cursor: pointer;
-    border: 1px solid var(--rule); background: var(--card); color: var(--ink-soft);
+  .door:hover::after, .door:focus-visible::after { background: linear-gradient(180deg, rgba(22,21,20,0.15) 0%, rgba(22,21,20,0.55) 100%); }
+  .door-label {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 24px; z-index: 1;
   }
-  .filters button.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-  .series-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
-  .series-card {
-    flex: 1 1 250px; max-width: 345px;
-    position: relative; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
-    background: var(--card); cursor: pointer; padding: 0; text-align: left;
+  .door-label h2 {
+    font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 700; font-size: clamp(20px, 2.6vw, 28px);
+    text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink);
   }
-  .series-img { height: 170px; width: 100%; object-fit: cover; display: block; }
-  .series-name {
-    padding: 12px 14px; display: flex; flex-direction: column; gap: 2px;
-    font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 700;
-    font-size: 17px; text-transform: uppercase; letter-spacing: 0.02em; color: var(--ink);
+  .door-label span {
+    display: block; margin-top: 4px; font-family: "IBM Plex Mono", monospace; font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft);
   }
-  .series-name span {
-    font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 400;
-    letter-spacing: 0.12em; color: var(--ink-soft); text-transform: uppercase;
+  .door.video { background-color: #1f1e1c; display: flex; align-items: center; justify-content: center; }
+  .door.video::before {
+    content: "▶"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%);
+    font-size: 40px; color: var(--ink-soft); opacity: 0.5; z-index: 1;
   }
-  .back-btn {
-    font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.06em;
-    text-transform: uppercase; padding: 8px 14px; border-radius: 999px; cursor: pointer;
-    border: 1px solid var(--rule); background: var(--card); color: var(--ink-soft); margin-bottom: 16px;
+  .contact {
+    text-align: center; padding: 40px 20px 20px;
   }
-  .series-title {
-    font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 700;
-    font-size: 24px; text-transform: uppercase; margin-bottom: 14px;
-  }
-  .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
-  .shot {
-    border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
-    background: var(--card); cursor: pointer; text-align: left; padding: 0;
-  }
-  .shot-img { height: 180px; width: 100%; object-fit: cover; display: block; }
-  .shot figcaption { padding: 10px 12px 12px; }
-  .shot .title { font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 600; font-size: 15.5px; }
-  .shot .meta {
-    font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-soft); margin-top: 3px;
-  }
-
-  /* ---------- Lightbox ---------- */
-  .lightbox {
-    position: fixed; inset: 0; z-index: 100; display: none;
-    background: rgba(5,5,4,0.94); align-items: center; justify-content: center; padding: 20px;
-  }
-  .lightbox.open { display: flex; }
-  .lb-card { max-width: 720px; width: 100%; }
-  .lb-img { height: min(58vh, 460px); width: 100%; border-radius: 4px; object-fit: contain; display: block; }
-  .lb-cap {
-    font-family: "IBM Plex Mono", monospace; font-size: 12px; line-height: 1.6;
-    color: #e6e1d5; margin-top: 12px;
-  }
-  .lb-cap .slug { color: #f0b429; }
-  .lb-close {
-    position: absolute; top: 16px; right: 16px; background: none; border: 1px solid #555;
-    color: #ddd; border-radius: 999px; width: 38px; height: 38px; font-size: 17px; cursor: pointer;
-  }
-  .lb-nav {
-    position: absolute; top: 50%; transform: translateY(-50%); background: rgba(20,19,17,0.6);
-    border: 1px solid #555; color: #ddd; border-radius: 999px; width: 44px; height: 44px;
-    font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;
-  }
-  .lb-nav:hover, .lb-nav:focus-visible { border-color: #f0b429; color: #f0b429; }
-  .lb-prev { left: 10px; }
-  .lb-next { right: 10px; }
-  @media (min-width: 760px) { .lb-prev { left: 24px; } .lb-next { right: 24px; } }
-
-  /* ---------- About / Contact ---------- */
-  .about-wrap { display: grid; gap: 28px; grid-template-columns: 1fr; }
-  @media (min-width: 720px) { .about-wrap { grid-template-columns: 200px 1fr; } }
-  .headshot {
-    width: 180px; height: 180px; border-radius: 4px;
-    object-fit: cover; display: block;
-    border: 1px solid var(--rule);
-  }
-  .about-logo { width: 180px; margin-top: 14px; }
-  .about-text p { margin-bottom: 14px; max-width: 66ch; }
-
-  .contact { background: #0c0b0a; color: var(--ink); max-width: none; }
-  .contact-inner { max-width: 1080px; margin: 0 auto; }
-  .contact .kicker { color: #f0b429; }
-  .contact h2 { color: var(--ink); }
-  .contact p { color: #d9d5cc; max-width: 60ch; }
-  .contact-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
-  .contact a.email {
-    display: inline-block; text-decoration: none;
-    font-family: "IBM Plex Mono", monospace; font-size: 14px; letter-spacing: 0.04em;
-    color: var(--ink); border: 1px solid #4a4d50; border-radius: 999px; padding: 12px 22px;
-  }
-  .contact a.email:hover { border-color: #f0b429; color: #f0b429; }
-  .copy-email {
+  .contact-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 4px; }
+  .contact a.email, .contact button.copy-email {
     font-family: "IBM Plex Mono", monospace; font-size: 13px; letter-spacing: 0.04em;
-    color: var(--ink-soft); border: 1px solid #4a4d50; border-radius: 999px; padding: 12px 18px;
-    background: none; cursor: pointer;
+    text-decoration: none; color: var(--ink); border: 1px solid #4a4d50; border-radius: 999px;
+    padding: 10px 20px; background: none; cursor: pointer;
   }
-  .copy-email:hover { border-color: #f0b429; color: #f0b429; }
-  .copy-email.copied { border-color: #4caf50; color: #4caf50; }
-
+  .contact a.email:hover, .contact button.copy-email:hover { border-color: #f0b429; color: #f0b429; }
+  .contact button.copy-email.copied { border-color: #4caf50; color: #4caf50; }
+  .contact .insta {
+    display: block; margin-top: 14px; font-family: "IBM Plex Mono", monospace; font-size: 12px;
+    letter-spacing: 0.04em; color: var(--ink-soft); text-decoration: none;
+  }
+  .contact .insta:hover { color: var(--press); }
   footer {
-    padding: 20px; text-align: center; border-top: 1px solid var(--rule);
+    text-align: center; padding: 20px; border-top: 1px solid var(--rule);
     font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--ink-soft); line-height: 2;
   }
+  footer a { color: inherit; }
 
-  img {
-    -webkit-user-select: none; user-select: none;
-    -webkit-user-drag: none; user-drag: none;
+  @media (max-width: 640px) {
+    .doors { grid-template-columns: 1fr; grid-template-rows: repeat(4, 42vh); min-height: auto; }
   }
 </style>
 <script data-goatcounter="https://dqdmedia.goatcounter.com/count"
@@ -322,532 +162,39 @@
 </head>
 <body>
 
-<div class="splash" id="splash" role="button" aria-label="Skip intro" tabindex="0">
-  <video id="splashVideo" muted playsinline poster="splash-poster.jpg"></video>
-</div>
-<script>
-  (function() {
-    var splash = document.getElementById("splash");
-    var isDeepLink = /^#(portfolio|editorial)\//.test(location.hash);
-    var alreadyShown = sessionStorage.getItem("splashShown");
-    var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (isDeepLink || alreadyShown || reducedMotion) {
-      splash.remove();
-      return;
-    }
-    sessionStorage.setItem("splashShown", "1");
-    var video = document.getElementById("splashVideo");
-    function closeSplash() {
-      splash.classList.add("hide");
-      setTimeout(function() { splash.remove(); }, 550);
-    }
-    video.addEventListener("ended", closeSplash);
-    video.addEventListener("error", closeSplash);
-    splash.addEventListener("click", closeSplash);
-    splash.addEventListener("keydown", function(e) {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); closeSplash(); }
-    });
-    video.src = "splash.mp4";
-    var playPromise = video.play();
-    if (playPromise && playPromise.catch) playPromise.catch(closeSplash);
-  })();
-</script>
-
 <header>
-  <div class="brand">
-    <img class="logo" src="logo.png" alt="DQD Media logo">
-    <div class="masthead">
-      <span class="name">Daniel Durgin</span>
-      <span class="beat">Fine Art &middot; Editorial &middot; Event Coverage</span>
-    </div>
-  </div>
-  <nav>
-    <a href="#editorial">Editorial</a>
-    <a href="#portfolio">Fine Art</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="resume.html">Resume</a>
-  </nav>
+  <img class="logo" src="logo.png" alt="DQD Media logo">
+  <h1>Daniel Durgin</h1>
+  <p>Photographer &amp; Videographer — Myrtle Beach, SC</p>
 </header>
 
-<div class="hero">
-  <div class="hero-img">
-    <div class="hero-overlay">
-      <h1>From the field to the frame</h1>
-      <p class="wirecap"><span class="slug">ATLANTA &mdash;</span> Haiti take a 10th-minute lead over Morocco as goalkeeper Yassine Bounou is beaten at his near post, FIFA World Cup Group C, Mercedes-Benz Stadium, June 24, 2026.</p>
-    </div>
-  </div>
-  <div class="hero-strip">
-    <span><b>Available for assignment</b></span>
-    <span>Event &amp; editorial coverage</span>
-    <span>Fast turnaround &middot; captioned &amp; wire-ready files</span>
-  </div>
-</div>
-
-<section id="editorial">
-  <p class="kicker">Editorial &amp; Event Coverage</p>
-  <h2>Recent Coverage</h2>
-  <p class="section-note">Coverage is organized by event &mdash; tap one to see the full set of captioned frames.</p>
-  <div class="essays" id="eventGrid"></div>
-  <p id="pastWrap" style="display:none; margin-top:16px;"><button class="back-btn" id="pastBtn" style="margin-bottom:0;">View past coverage &darr;</button></p>
-  <div id="eventView" style="display:none;">
-    <button class="back-btn" id="eventBack">&larr; All Coverage</button>
-    <h3 class="series-title" id="eventTitle"></h3>
-    <p id="eventMeta" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-soft); margin:-8px 0 16px;"></p>
-    <div class="essays" id="eventPhotos"></div>
-  </div>
-</section>
-
-<section id="portfolio">
-  <p class="kicker">Fine Art</p>
-  <h2>Fine Art Photography</h2>
-  <p class="section-note">Seven ongoing series: Carolina Coast, Carolina After Dark, Experimental Processes, Black and White, Aerial Perspectives, Wildlife, and Motion and Energy. Tap a series to view the collection. Every piece is available for purchase as a paper print, on metal, or on canvas, in a range of sizes.</p>
-  <p style="margin:-14px 0 26px;"><a href="https://dqdmedia.client-gallery.com/gallery/dqdmedia" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;color:var(--press);border:1px solid var(--press);border-radius:999px;padding:9px 18px;display:inline-block;">Purchase Prints &rarr;</a></p>
-  <div class="series-grid" id="seriesGrid"></div>
-  <div id="seriesView" style="display:none;">
-    <button class="back-btn" id="backBtn">&larr; All Series</button>
-    <h3 class="series-title" id="seriesTitle"></h3>
-    <div class="grid" id="grid"></div>
-  </div>
-</section>
-
-<section id="about">
-  <p class="kicker">About</p>
-  <h2>Daniel Durgin</h2>
-  <div class="about-wrap">
-    <div>
-      <img class="headshot" src="about-me.jpg" alt="Daniel Durgin" loading="lazy">
-      <img class="about-logo" src="logo.png" alt="DQD Media logo">
-    </div>
-    <div class="about-text">
-      <p>I'm a photographer based in Myrtle Beach, South Carolina. My fine art work spans seven ongoing series, from Carolina Coast to Experimental Processes &mdash; exactly what it sounds like. On the editorial side, I shoot sporting events and community assignments, where the job is simple: get the shot, get the caption right, don't miss the moment.</p>
-      <p>Whether it's for an editor, a client, or someone who wants a print on their wall, the approach is the same &mdash; show up prepared and deliver work people can count on.</p>
-      <p>Available for event coverage, image licensing, and <a href="https://dqdmedia.client-gallery.com/gallery/dqdmedia" target="_blank" rel="noopener" style="color:var(--press);">print sales</a>.</p>
-      <p style="margin-top:6px;"><a href="resume.html" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;color:var(--press);border:1px solid var(--press);border-radius:999px;padding:9px 18px;display:inline-block;">View Resume &rarr;</a></p>
-    </div>
-  </div>
-</section>
+<nav class="doors" aria-label="Sections">
+  <a class="door" href="/fine-art/" style="background-image:url('photos/fineart/carolina-coast/intracoastal-sunset.jpg')">
+    <span class="door-label"><h2>Fine Art</h2><span>Prints on paper, metal &amp; canvas</span></span>
+  </a>
+  <a class="door" href="/events/" style="background-image:url('photos/events/2026-06-24-morocco-haiti/756A0267.jpg')">
+    <span class="door-label"><h2>Events</h2><span>Assignment &amp; event coverage</span></span>
+  </a>
+  <a class="door video" href="/video/">
+    <span class="door-label"><h2>Video</h2><span>Short films &amp; edits</span></span>
+  </a>
+  <a class="door" href="/portfolio/" style="background-image:url('photos/portfolio/bench-swing-silhouette.jpg')">
+    <span class="door-label"><h2>Portfolio</h2><span>The range of the work</span></span>
+  </a>
+</nav>
 
 <section class="contact" id="contact">
-  <div class="contact-inner">
-    <p class="kicker">Contact</p>
-    <h2>Assignments &amp; Media Requests</h2>
-    <p>For editorial assignments, event coverage, or image licensing. Typical response within 24 hours.</p>
-    <div class="contact-row">
-      <a class="email" href="mailto:daniel@dqdmedia.com">daniel@dqdmedia.com</a>
-      <button class="copy-email" id="copyEmailBtn" type="button">Copy email</button>
-      <a class="email" href="tel:+18432817322">843.281.7322</a>
-    </div>
-    <p style="margin-top:14px;"><a href="https://instagram.com/dqd.media" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.04em;color:#d9d5cc;text-decoration:none;">&#64;dqd.media on Instagram &rarr;</a></p>
+  <div class="contact-actions">
+    <button class="copy-email" id="copyEmailBtn" type="button">Copy email</button>
+    <a class="email" href="tel:+18432817322">843.281.7322</a>
+    <a class="email" href="/resume.html">Resume</a>
   </div>
+  <a class="insta" href="https://instagram.com/dqd.media" target="_blank" rel="noopener">&#64;dqd.media on Instagram &rarr;</a>
 </section>
 
-<footer>&copy; 2026 Daniel Durgin / DQD Media<br>All images &copy; the photographer<br><a href="https://instagram.com/dqd.media" target="_blank" rel="noopener" style="color:inherit;">&#64;dqd.media</a></footer>
-
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
-  <button class="lb-close" id="lbClose" aria-label="Close">&#10005;</button>
-  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image">&#8249;</button>
-  <button class="lb-nav lb-next" id="lbNext" aria-label="Next image">&#8250;</button>
-  <div class="lb-card">
-    <img class="lb-img" id="lbImg" alt="">
-    <p class="lb-cap" id="lbCap"></p>
-    <p style="margin-top:10px;"><a id="lbLink" href="https://dqdmedia.client-gallery.com/gallery/dqdmedia" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#f0b429;text-decoration:none;">Purchase this print &rarr;</a></p>
-  </div>
-</div>
+<footer>&copy; 2026 Daniel Durgin / DQD Media<br>All images &copy; the photographer</footer>
 
 <script>
-  document.addEventListener("contextmenu", (e) => {
-    if (e.target.tagName === "IMG") e.preventDefault();
-  });
-  document.addEventListener("dragstart", (e) => {
-    if (e.target.tagName === "IMG") e.preventDefault();
-  });
-
-  // ----- Replace these with your real photos -----
-  // Swap the "grad" gradients for image URLs later: set img:"photos/filename.jpg"
-  const SHOTS = [
-    // Carolina Coast
-    { title: "Intracoastal Sunset", cat: "Carolina Coast", slug: "INTRACOASTAL WATERWAY, SC", cap: "A small boat runs the waterway as the sky catches fire at last light.", img: "photos/fineart/carolina-coast/intracoastal-sunset.jpg", cover: true },
-    { title: "Intracoastal Close", cat: "Carolina Coast", slug: "INTRACOASTAL WATERWAY, SC", cap: "Sunset color breaks across the surface of the waterway.", img: "photos/fineart/carolina-coast/intracoastal-close.jpg" },
-    { title: "Seed Head at the Pond", cat: "Carolina Coast", slug: "SOCASTEE, SC", cap: "A dried seed head stands over still water at the pond's edge.", img: "photos/fineart/carolina-coast/seed-head-marsh.jpg" },
-    { title: "Spring Blossom", cat: "Carolina Coast", slug: "SOCASTEE, SC", cap: "New blossoms open on a bare branch in early spring light.", img: "photos/fineart/carolina-coast/spring-blossom.jpg" },
-    { title: "Wheel at Broadway", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH \u2014 MYRTLE BEACH, SC", cap: "The Broadway 360 wheel turns against a clear summer sky.", img: "photos/fineart/carolina-coast/broadway-wheel-blue-sky.jpg" },
-    { title: "Lighthouse at Broadway", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH \u2014 MYRTLE BEACH, SC", cap: "A replica lighthouse rises against a clear blue sky.", img: "photos/fineart/carolina-coast/broadway-lighthouse.jpg" },
-    { title: "Broadway at Sunset", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH \u2014 MYRTLE BEACH, SC", cap: "The wheel and waterfront rides glow under a burning sunset sky.", img: "photos/fineart/carolina-coast/broadway-sunset.jpg" },
-    { title: "Storm Over Garden City Pier", cat: "Carolina Coast", slug: "GARDEN CITY, SC", cap: "Waves break beneath the pier as a storm rolls in overhead.", img: "photos/fineart/carolina-coast/storm-garden-city-pier.jpg" },
-    { title: "Heron in the Marsh", cat: "Carolina Coast", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "A heron wades the shallows at low tide.", img: "photos/fineart/carolina-coast/heron-huntington-marsh.jpg" },
-    { title: "Beneath the Live Oaks", cat: "Carolina Coast", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "Spanish moss frames a view out over the marsh.", img: "photos/fineart/carolina-coast/huntington-beach-live-oaks.jpg" },
-    { title: "Surfside Pier, Blue Hour", cat: "Carolina Coast", slug: "SURFSIDE BEACH, SC", cap: "The rebuilt pier glows above the water as the town lights come on.", img: "photos/fineart/carolina-coast/surfside-pier-blue-hour.jpg" },
-    { title: "Surfside Pier at Night", cat: "Carolina Coast", slug: "SURFSIDE BEACH, SC", cap: "The pier reaches back toward shore under its own light. Aerial night exposure.", img: "photos/fineart/carolina-coast/surfside-pier-night.jpg" },
-    { title: "Surfside Pier, Aerial Silhouette", cat: "Carolina Coast", slug: "SURFSIDE BEACH, SC", cap: "Only the pier's lights break the dark water below.", img: "photos/fineart/carolina-coast/surfside-pier-aerial-silhouette.jpg" },
-    { title: "Rust and Rainbow", cat: "Carolina Coast", slug: "HWY 378, SC", cap: "Four vintage Volkswagen buses sit retired in the grass along the highway.", img: "photos/fineart/carolina-coast/vw-buses.jpg" },
-    { title: "Waccamaw Bend", cat: "Carolina Coast", slug: "WACCAMAW RIVER, SC", cap: "The river bends through bare cypress on a gray winter afternoon.", img: "photos/fineart/carolina-coast/waccamaw-river-bend-winter.jpg" },
-    { title: "Waccamaw River, High Above", cat: "Carolina Coast", slug: "WACCAMAW RIVER, SC", cap: "The river threads for miles through coastal forest, seen from high altitude.", img: "photos/fineart/carolina-coast/waccamaw-river-high-altitude.jpg" },
-    { title: "Waccamaw Confluence", cat: "Carolina Coast", slug: "WACCAMAW RIVER, SC", cap: "Two channels of the river meet, seen from directly overhead.", img: "photos/fineart/carolina-coast/waccamaw-river-confluence.jpg" },
-
-    // Carolina After Dark
-    { title: "Surfside Pier, Blue Hour", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "The rebuilt pier glows above the water as the town lights come on.", img: "photos/fineart/carolina-after-dark/surfside-pier-blue-hour.jpg", cover: true },
-    { title: "Moon", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "A gibbous moon rises alone in a black sky.", img: "photos/fineart/carolina-after-dark/moon.jpg" },
-    { title: "Night Sky Through Pines", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "Stars gather in a gap between silhouetted pines.", img: "photos/fineart/carolina-after-dark/night-sky-through-pines.jpg" },
-    { title: "Blood Moon", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "The moon turns deep red during a total lunar eclipse.", img: "photos/fineart/carolina-after-dark/blood-moon.jpg" },
-    { title: "Stars Over Surfside", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "A long exposure of the surf under a star-filled sky.", img: "photos/fineart/carolina-after-dark/stars-over-surfside.jpg" },
-    { title: "Pier Lights at Midnight", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "String lights outline the pier's pavilion against a black sky, moonlight tracking across the water.", img: "photos/fineart/carolina-after-dark/pier-lights-midnight.jpg" },
-    { title: "Canopy of Stars", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "The Milky Way's haze spreads over a ring of pines.", img: "photos/fineart/carolina-after-dark/canopy-of-stars.jpg" },
-    { title: "Moonrise Through the Pines", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "Moonlight rims the trees as stars fill the gaps between branches.", img: "photos/fineart/carolina-after-dark/moonrise-through-pines.jpg" },
-    { title: "Surfside Pier at Night", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "The pier reaches back toward shore under its own light. Aerial night exposure.", img: "photos/fineart/carolina-after-dark/surfside-pier-night.jpg" },
-    { title: "Intracoastal at Night", cat: "Carolina After Dark", slug: "INTRACOASTAL WATERWAY, SC", cap: "A long exposure over still water, the waterway lit only by the moon and shoreline.", img: "photos/fineart/carolina-after-dark/intracoastal-night.jpg" },
-
-    // Experimental Processes
-    { title: "Green Current", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram, looping current rendered in acid green.", img: "photos/fineart/experimental-processes/chemigram-green-current.jpg", cover: true },
-    { title: "Phase Shift", cat: "Experimental Processes", slug: "STUDIO", cap: "A triptych chemigram, three panels of chemical reaction across a single frame.", img: "photos/fineart/experimental-processes/phase-shift.jpg" },
-    { title: "Amber Bloom", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram, developer bleeding gold and black across the paper.", img: "photos/fineart/experimental-processes/chemigram-amber-bloom.jpg" },
-    { title: "Black Bloom", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram in high contrast, chemical reaction outlined in white.", img: "photos/fineart/experimental-processes/chemigram-black-bloom.jpg" },
-    { title: "Magenta Drift", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram, magenta and amber tones pooling across the emulsion.", img: "photos/fineart/experimental-processes/chemigram-magenta-drift.jpg" },
-    { title: "Lumen Print No. 1", cat: "Experimental Processes", slug: "STUDIO", cap: "Botanical lumen print, sun-exposed directly on photo paper.", img: "photos/fineart/experimental-processes/lumen-print-01.jpg" },
-    { title: "Lumen Print No. 2", cat: "Experimental Processes", slug: "STUDIO", cap: "Lumen print of a flower in bloom, colors shifted by exposure time.", img: "photos/fineart/experimental-processes/lumen-print-02.jpg" },
-    { title: "Lumen Print No. 3", cat: "Experimental Processes", slug: "STUDIO", cap: "Lumen print of leaf and stem, warm tones from a long sun exposure.", img: "photos/fineart/experimental-processes/lumen-print-03.jpg" },
-
-    // Black and White
-    { title: "Pasture Fence", cat: "Black and White", slug: "SOCASTEE, SC", cap: "A weathered fence line, a horse grazing soft in the background.", img: "photos/fineart/black-and-white/pasture-fence.jpg", cover: true },
-    { title: "Garden City Pier", cat: "Black and White", slug: "GARDEN CITY, SC", cap: "Storm light and breaking surf beneath the pier, in monochrome.", img: "photos/fineart/black-and-white/garden-city-pier.jpg" },
-    { title: "Surfside Pier After Dark", cat: "Black and White", slug: "SURFSIDE BEACH, SC", cap: "An aerial view of the pier lit alone against the night.", img: "photos/fineart/black-and-white/surfside-pier-aerial-night.jpg" },
-    { title: "Weathered Chair", cat: "Black and White", slug: "SOCASTEE, SC", cap: "A collapsing adirondack chair, reclaimed by the treeline.", img: "photos/fineart/black-and-white/weathered-chair.jpg" },
-    { title: "Web and Spider", cat: "Black and White", slug: "SOCASTEE, SC", cap: "A garden spider rebuilds its web among the fall foliage.", img: "photos/fineart/black-and-white/spider-web.jpg" },
-
-    // Aerial Perspectives
-    { title: "Winter on the Waccamaw", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "A boat works the river beneath a bruised winter sky, seen from altitude.", img: "photos/fineart/aerial-perspectives/waccamaw-river-winter-boat.jpg", cover: true },
-    { title: "Waccamaw Bend", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "The river bends through bare cypress on a gray winter afternoon.", img: "photos/fineart/aerial-perspectives/waccamaw-river-bend-winter.jpg" },
-    { title: "Waccamaw River, High Above", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "The river threads for miles through coastal forest, seen from high altitude.", img: "photos/fineart/aerial-perspectives/waccamaw-river-high-altitude.jpg" },
-    { title: "Waccamaw Serpentine", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "Another pass over the river's bends, green canopy in every direction.", img: "photos/fineart/aerial-perspectives/waccamaw-river-serpentine.jpg" },
-
-    // Wildlife
-    { title: "Alligator in the Brush", cat: "Wildlife", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "An alligator rests low in the reeds along the water's edge.", img: "photos/fineart/wildlife/alligator-huntington-beach.jpg", cover: true },
-    { title: "Ring-Billed Gull", cat: "Wildlife", slug: "MARKET COMMON, SC", cap: "A ring-billed gull poses at The Market Common.", img: "photos/fineart/wildlife/gull-portrait-market-common.jpg" },
-    { title: "Gulls on the Rail", cat: "Wildlife", slug: "MARKET COMMON, SC", cap: "Gulls line a railing at The Market Common's lake.", img: "photos/fineart/wildlife/gulls-on-rail-market-common.jpg" },
-    { title: "Great Blue Heron", cat: "Wildlife", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "A great blue heron hunts the shallows at low tide.", img: "photos/fineart/wildlife/great-blue-heron.jpg" },
-    { title: "Rooster", cat: "Wildlife", slug: "SOCASTEE, SC", cap: "A bantam rooster crows from a fence post.", img: "photos/fineart/wildlife/rooster.jpg" },
-
-    // Motion and Energy
-    { title: "Fourth of July", cat: "Motion and Energy", slug: "MYRTLE BEACH, SC", cap: "Fireworks burst over the palms on Independence Day.", img: "photos/fineart/motion-and-energy/fourth-of-july-fireworks.jpg", cover: true },
-    { title: "Full Throttle", cat: "Motion and Energy", slug: "BROADWAY AT THE BEACH \u2014 MYRTLE BEACH, SC", cap: "A jet boat carves a hard turn, spray catching the afternoon light.", img: "photos/fineart/motion-and-energy/speedboat-broadway.jpg" },
-  ];
-
-  const SERIES = ["Carolina Coast", "Carolina After Dark", "Experimental Processes", "Black and White", "Aerial Perspectives", "Wildlife", "Motion and Energy"];
-
-  const seriesGrid = document.getElementById("seriesGrid");
-  const seriesView = document.getElementById("seriesView");
-  const seriesTitle = document.getElementById("seriesTitle");
-  const gridEl = document.getElementById("grid");
-  const lb = document.getElementById("lightbox");
-  const lbImg = document.getElementById("lbImg");
-  const lbCap = document.getElementById("lbCap");
-  const lbPrev = document.getElementById("lbPrev");
-  const lbNext = document.getElementById("lbNext");
-  const lbClose = document.getElementById("lbClose");
-
-  let lbItems = [];
-  let lbIndex = 0;
-  let lbRenderer = null;
-  let lbLastFocused = null;
-
-  function closeLightbox() {
-    lb.classList.remove("open");
-    if (lbLastFocused) { lbLastFocused.focus(); lbLastFocused = null; }
-  }
-
-  function showLightboxAt(i) {
-    lbIndex = (i + lbItems.length) % lbItems.length;
-    const r = lbRenderer(lbItems[lbIndex]);
-    if (r.img) {
-      lbImg.src = r.img;
-      lbImg.alt = r.alt;
-      lbImg.style.background = "";
-    } else {
-      lbImg.removeAttribute("src");
-      lbImg.alt = "";
-      lbImg.style.background = `linear-gradient(140deg, ${r.grad[0]}, ${r.grad[1]})`;
-    }
-    lbCap.innerHTML = r.cap;
-    lbLink.textContent = r.linkText;
-    lbLink.href = r.linkHref;
-  }
-
-  function openLightbox(items, startIndex, renderer) {
-    lbItems = items;
-    lbRenderer = renderer;
-    lbLastFocused = document.activeElement;
-    showLightboxAt(startIndex);
-    lb.classList.add("open");
-    const showNav = lbItems.length > 1;
-    lbPrev.style.display = showNav ? "flex" : "none";
-    lbNext.style.display = showNav ? "flex" : "none";
-    lbClose.focus();
-  }
-
-  lbPrev.onclick = (e) => { e.stopPropagation(); showLightboxAt(lbIndex - 1); };
-  lbNext.onclick = (e) => { e.stopPropagation(); showLightboxAt(lbIndex + 1); };
-
-  let lbTouchStartX = null;
-  lb.addEventListener("touchstart", (e) => { lbTouchStartX = e.changedTouches[0].clientX; }, { passive: true });
-  lb.addEventListener("touchend", (e) => {
-    if (lbTouchStartX === null) return;
-    const dx = e.changedTouches[0].clientX - lbTouchStartX;
-    if (Math.abs(dx) > 40) { dx > 0 ? showLightboxAt(lbIndex - 1) : showLightboxAt(lbIndex + 1); }
-    lbTouchStartX = null;
-  }, { passive: true });
-
-  function escAttr(s) { return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;"); }
-  function mediaTag(s, cls, alt) {
-    if (!s.img) {
-      return `<div class="${cls}" style="background:linear-gradient(140deg, ${s.grad[0]}, ${s.grad[1]})"></div>`;
-    }
-    const thumb = s.img.replace(/\.jpg$/, "-thumb.jpg");
-    return `<img class="${cls}" src="${thumb}" srcset="${thumb} 900w, ${s.img} 2400w" sizes="(max-width: 600px) 100vw, 400px" alt="${escAttr(alt)}" loading="lazy">`;
-  }
-
-  function coverFor(name) {
-    const shots = SHOTS.filter(s => s.cat === name);
-    return shots.find(s => s.cover) || shots.find(s => s.img) || shots[0];
-  }
-
-  function renderSeries() {
-    seriesGrid.innerHTML = "";
-    SERIES.forEach(name => {
-      const count = SHOTS.filter(s => s.cat === name).length;
-      const cover = coverFor(name);
-      const card = document.createElement("button");
-      card.className = "series-card";
-      card.innerHTML = `
-        ${mediaTag(cover, "series-img", `${name}: ${cover.cap}`)}
-        <div class="series-name">${name}<span>${count} ${count === 1 ? "piece" : "pieces"}</span></div>`;
-      card.onclick = () => openSeries(name);
-      seriesGrid.appendChild(card);
-    });
-  }
-
-  function slugify(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
-
-  function openSeries(name) {
-    seriesTitle.textContent = name;
-    renderGrid(name);
-    seriesGrid.style.display = "none";
-    seriesView.style.display = "block";
-    document.getElementById("portfolio").scrollIntoView();
-    history.replaceState(null, "", "#portfolio/" + slugify(name));
-  }
-
-  document.getElementById("backBtn").onclick = () => {
-    seriesView.style.display = "none";
-    seriesGrid.style.display = "flex";
-    history.replaceState(null, "", "#portfolio");
-  };
-
-  function renderGrid(name) {
-    gridEl.innerHTML = "";
-    const shots = SHOTS.filter(s => s.cat === name);
-    shots.forEach((s, idx) => {
-      const fig = document.createElement("button");
-      fig.className = "shot";
-      fig.setAttribute("aria-label", "View " + s.title);
-      fig.innerHTML = `
-        ${mediaTag(s, "shot-img", s.cap)}
-        <figcaption>
-          <div class="title">${s.title}</div>
-          <div class="meta">${s.cat}</div>
-        </figcaption>`;
-      fig.onclick = () => {
-        openLightbox(shots, idx, (item) => ({
-          img: item.img,
-          grad: item.grad,
-          alt: item.cap,
-          cap: `<span class="slug">${item.slug} &mdash;</span> ${item.cap}`,
-          linkText: "Purchase this print \u2192",
-          linkHref: "https://dqdmedia.client-gallery.com/gallery/dqdmedia"
-        }));
-      };
-      gridEl.appendChild(fig);
-    });
-  }
-
-  lbClose.onclick = () => closeLightbox();
-  lb.onclick = (e) => { if (e.target === lb) closeLightbox(); };
-  document.addEventListener("keydown", (e) => {
-    if (!lb.classList.contains("open")) return;
-    if (e.key === "Escape") { closeLightbox(); return; }
-    if (e.key === "ArrowLeft") showLightboxAt(lbIndex - 1);
-    if (e.key === "ArrowRight") showLightboxAt(lbIndex + 1);
-    if (e.key === "Tab") {
-      const focusable = [lbClose, lbPrev, lbNext, lbLink].filter(el => el.offsetParent !== null);
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-    }
-  });
-
-  const EVENTS = [
-    {
-      title: "Morocco v Haiti \u2014 FIFA World Cup",
-      slug: "morocco-haiti-world-cup",
-      location: "ATLANTA",
-      date: "June 24, 2026",
-      photos: [
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0017.jpg", taken: "2026-06-24T19:40:36", cap: "Fans make their way into Mercedes-Benz Stadium ahead of the Haiti-Morocco FIFA World Cup Group C match." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0022.jpg", taken: "2026-06-24T19:43:32", cap: "World Cup signage decorates downtown Atlanta ahead of the Haiti-Morocco match." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0024.jpg", taken: "2026-06-24T19:44:28", cap: "A costumed \"Super Haitiman\" poses with fans outside Mercedes-Benz Stadium before kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0027.jpg", taken: "2026-06-24T19:50:28", cap: "World Cup mural art lines the concourse on the walk into Mercedes-Benz Stadium." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0033.jpg", taken: "2026-06-24T19:51:33", cap: "Mercedes-Benz Stadium in downtown Atlanta, host site of the Haiti-Morocco FIFA World Cup Group C match." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0035.jpg", taken: "2026-06-24T19:53:38", cap: "Fans gather in the fan zone outside Mercedes-Benz Stadium before kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0042.jpg", taken: "2026-06-24T20:12:38", cap: "A general view of the pitch at Mercedes-Benz Stadium as fans file in before kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0044.jpg", taken: "2026-06-24T20:19:02", cap: "Morocco takes the pitch ahead of their FIFA World Cup Group C match against Haiti." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0046.jpg", taken: "2026-06-24T20:26:04", cap: "Haiti takes the pitch ahead of their FIFA World Cup Group C match against Morocco." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0066.jpg", taken: "2026-06-24T20:59:40", cap: "Grounds crew waters the pitch at Mercedes-Benz Stadium ahead of kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0069.jpg", taken: "2026-06-24T20:59:49", cap: "Grounds crew finishes watering the pitch moments before kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0119.jpg", taken: "2026-06-24T21:13:47", cap: "Haiti's goalkeeper warms up ahead of kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0153.jpg", taken: "2026-06-24T21:15:35", cap: "Haiti players take the field for pregame warmups." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0158.jpg", taken: "2026-06-24T21:16:12", cap: "Haiti's No. 11 warms up ahead of kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0162.jpg", taken: "2026-06-24T21:17:09", cap: "Haiti and Morocco players share the pitch during pregame warmups." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0176.jpg", taken: "2026-06-24T21:20:00", cap: "Haiti's goalkeeper continues warmups ahead of kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0223.jpg", taken: "2026-06-24T21:21:24", cap: "Morocco's goalkeeper warms up ahead of kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0230.jpg", taken: "2026-06-24T21:24:53", cap: "Haiti players run through pregame warmups." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0246.jpg", taken: "2026-06-24T21:46:22", cap: "Crews prepare the pitch for the pregame ceremony." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0253.jpg", taken: "2026-06-24T21:52:51", cap: "Final preparations are made for the pregame ceremony at Mercedes-Benz Stadium." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0262.jpg", taken: "2026-06-24T21:54:48", cap: "The pregame ceremony gets underway at Mercedes-Benz Stadium." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0264.jpg", taken: "2026-06-24T21:56:15", cap: "Performers take part in the pregame ceremony ahead of kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0267.jpg", taken: "2026-06-24T21:56:48", cover: true, cap: "The pregame ceremony continues on the pitch at Mercedes-Benz Stadium." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0268.jpg", taken: "2026-06-24T21:56:56", cap: "The pregame ceremony closes out ahead of kickoff." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0279.jpg", taken: "2026-06-24T22:04:52", cap: "Haiti's No. 15 challenges Morocco's No. 10 in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0280.jpg", taken: "2026-06-24T22:05:17", cap: "Haiti's No. 22 battles Morocco's No. 23 for the ball in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0284.jpg", taken: "2026-06-24T22:05:19", cap: "Haiti's No. 22 and Morocco's No. 23 continue their first-half battle for possession." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0302.jpg", taken: "2026-06-24T22:06:22", cap: "Haiti's No. 22 challenges Morocco's No. 24 in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0305.jpg", taken: "2026-06-24T22:06:48", cap: "Morocco's No. 20 breaks away in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0318.jpg", taken: "2026-06-24T22:09:33", cap: "Haiti's No. 4 challenges a pass from Morocco's No. 2 in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0341.jpg", taken: "2026-06-24T22:09:37", cap: "Morocco's No. 23 fires a shot in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0354.jpg", taken: "2026-06-24T22:09:38", cap: "Haiti's No. 5 and goalkeeper combine to block a Morocco shot in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0395.jpg", taken: "2026-06-24T22:11:20", cap: "Haiti's No. 10 takes a free kick in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0435.jpg", taken: "2026-06-24T22:13:56", cap: "Haiti's No. 22 shoots on goal under pressure from Morocco's No. 36." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0441.jpg", taken: "2026-06-24T22:13:57", cap: "Haiti celebrates their first goal of the match in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0466.jpg", taken: "2026-06-24T22:16:16", cap: "Morocco's No. 20 shoots on goal as Haiti's No. 5 challenges in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0471.jpg", taken: "2026-06-24T22:16:17", cap: "Haiti goalkeeper No. 1 makes the save in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0496.jpg", taken: "2026-06-24T22:18:43", cap: "Morocco takes a corner kick in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0501.jpg", taken: "2026-06-24T22:18:44", cap: "Haiti's No. 5 clears a Morocco shot off the line in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0517.jpg", taken: "2026-06-24T22:24:37", cap: "Haiti's bench watches the action during the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0519.jpg", taken: "2026-06-24T22:24:41", cap: "Morocco's bench watches the action during the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0566.jpg", taken: "2026-06-24T22:47:02", cap: "Haiti celebrates their second goal of the match in the first half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0569.jpg", taken: "2026-06-24T22:54:14", cap: "Morocco's No. 2 takes a free kick in first-half stoppage time." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0591.jpg", taken: "2026-06-24T22:54:16", cap: "Haiti's goalkeeper makes a save in first-half stoppage time." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0614.jpg", taken: "2026-06-24T23:29:54", cap: "Haiti's No. 10 takes a free kick in the second half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0645.jpg", taken: "2026-06-24T23:40:12", cap: "Morocco's No. 2 takes a free kick in the second half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0650.jpg", taken: "2026-06-24T23:40:13", cap: "Haiti's wall blocks a free kick from Morocco's No. 2." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0685.jpg", taken: "2026-06-24T23:43:43", cap: "Morocco celebrates a goal in the second half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0699.jpg", taken: "2026-06-24T23:59:28", cap: "Morocco goalkeeper Yassine Bounou plays the ball out of the back under pressure from Haiti's No. 20 in the second half." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0710.jpg", taken: "2026-06-25T00:00:33", cap: "Haiti's No. 9 takes a free kick in second-half stoppage time." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0719.jpg", taken: "2026-06-25T00:00:34", cap: "Morocco's goalkeeper saves a free kick from Haiti's No. 9 in second-half stoppage time." },
-        { img: "photos/events/2026-06-24-morocco-haiti/756A0732.jpg", taken: "2026-06-25T00:00:50", cap: "Haiti's No. 25 takes a corner kick in second-half stoppage time." },
-      ]
-    },
-    {
-      title: "Horry-Georgetown Technical College Foundation Gala",
-      slug: "hgtc-foundation-gala",
-      location: "MYRTLE BEACH, SC",
-      date: "March 2, 2024",
-      photos: [
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0018.jpg", taken: "2024-03-02T16:35:15", cap: "Auction displays are set up ahead of the Horry-Georgetown Technical College Foundation's \"One Night in Paris\" gala." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0037.jpg", taken: "2024-03-02T16:50:57", cap: "A table is set for guests at the Horry-Georgetown Technical College Foundation gala." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0098.jpg", taken: "2024-03-02T17:27:20", cap: "Culinary institute students prepare dishes in the kitchen ahead of the gala dinner." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0119.jpg", taken: "2024-03-02T17:31:09", cap: "A trumpeter performs for guests as the Horry-Georgetown Technical College Foundation gala gets underway." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0132.jpg", taken: "2024-03-02T17:42:57", cap: "Croissants and place settings await guests at the \"One Night in Paris\" themed dinner." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0140.jpg", taken: "2024-03-02T17:44:54", cap: "Guests browse the silent auction displays during the Horry-Georgetown Technical College Foundation gala." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0147.jpg", taken: "2024-03-02T17:46:07", cover: true, cap: "A pastry Eiffel Tower centerpiece anchors the dessert table for the gala's \"One Night in Paris\" theme." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0152.jpg", taken: "2024-03-02T17:47:01", cap: "The culinary institute's chef and students pose together in the kitchen." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0176.jpg", taken: "2024-03-02T17:51:01", cap: "Live music sets the mood as guests mingle before dinner." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0186.jpg", taken: "2024-03-02T17:58:31", cap: "Horry-Georgetown Technical College's president poses with guests at the \"Passport to Paris\" step-and-repeat." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0193.jpg", taken: "2024-03-02T18:00:50", cap: "Guests gather in the atrium during the Horry-Georgetown Technical College Foundation gala's cocktail hour." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0206.jpg", taken: "2024-03-02T18:10:44", cap: "A chef and culinary institute students pose in the kitchen during the gala." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0216.jpg", taken: "2024-03-02T18:12:48", cap: "Plated desserts await guests at the Horry-Georgetown Technical College Foundation gala." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0266.jpg", taken: "2024-03-02T19:02:43", cap: "Horry-Georgetown Technical College's president addresses guests during dinner." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0376.jpg", taken: "2024-03-02T20:03:33", cap: "An auctioneer works the room during the gala's live auction." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0391.jpg", taken: "2024-03-02T21:31:49", cap: "Horry-Georgetown Technical College's president gives remarks to gala guests." },
-        { img: "photos/events/2024-03-02-hgtc-foundation-gala/756A0424.jpg", taken: "2024-03-02T22:43:48", cap: "The Horry-Georgetown Technical College Culinary Institute at the Market Common campus, site of the Foundation's annual gala." },
-      ]
-    }
-  ];
-
-  const eventGrid = document.getElementById("eventGrid");
-  const eventView = document.getElementById("eventView");
-  const eventPhotos = document.getElementById("eventPhotos");
-  const pastWrap = document.getElementById("pastWrap");
-  const lbLink = document.getElementById("lbLink");
-  let showPast = false;
-
-  function chronoPhotos(ev) { return [...ev.photos].sort((a, b) => new Date(a.taken) - new Date(b.taken)); }
-  function coverPhoto(ev) { return ev.photos.find(p => p.cover) || chronoPhotos(ev)[0]; }
-
-  function renderEvents() {
-    eventGrid.innerHTML = "";
-    const sorted = [...EVENTS].sort((a, b) => new Date(b.date) - new Date(a.date));
-    const list = showPast ? sorted : sorted.slice(0, 3);
-    list.forEach(ev => {
-      const cover = coverPhoto(ev);
-      const card = document.createElement("button");
-      card.className = "essay";
-      card.style.textAlign = "left";
-      card.style.cursor = "pointer";
-      card.innerHTML = `
-        ${mediaTag(cover, "essay-img", `${ev.title}: ${cover.cap}`)}
-        <div class="essay-body">
-          <span class="essay-tag">${ev.date} &middot; ${ev.photos.length} ${ev.photos.length === 1 ? "frame" : "frames"}</span>
-          <h3>${ev.title}</h3>
-        </div>`;
-      card.onclick = () => openEvent(ev);
-      eventGrid.appendChild(card);
-    });
-    pastWrap.style.display = (!showPast && EVENTS.length > 3) ? "block" : "none";
-  }
-
-  document.getElementById("pastBtn").onclick = () => { showPast = true; renderEvents(); };
-
-  function openEvent(ev) {
-    document.getElementById("eventTitle").textContent = ev.title.replace(/\u2014/g, "\u2014");
-    document.getElementById("eventMeta").textContent = ev.location + " \u00b7 " + ev.date;
-    eventPhotos.innerHTML = "";
-    const photos = chronoPhotos(ev);
-    photos.forEach((p, idx) => {
-      const card = document.createElement("button");
-      card.className = "essay";
-      card.style.textAlign = "left";
-      card.style.cursor = "pointer";
-      card.innerHTML = `
-        ${mediaTag(p, "essay-img", p.cap)}
-        <div class="essay-body">
-          <p class="wire"><span class="slug">${ev.location} \u2014</span> ${p.cap}</p>
-        </div>`;
-      card.onclick = () => {
-        openLightbox(photos, idx, (item) => ({
-          img: item.img,
-          grad: item.grad,
-          alt: item.cap,
-          cap: `<span class="slug">${ev.location} \u2014</span> ${item.cap}`,
-          linkText: "License this image \u2192",
-          linkHref: "mailto:daniel@dqdmedia.com?subject=Image licensing inquiry"
-        }));
-      };
-      eventPhotos.appendChild(card);
-    });
-    eventGrid.style.display = "none";
-    pastWrap.style.display = "none";
-    eventView.style.display = "block";
-    document.getElementById("editorial").scrollIntoView();
-    history.replaceState(null, "", "#editorial/" + ev.slug);
-  }
-
-  document.getElementById("eventBack").onclick = () => {
-    eventView.style.display = "none";
-    eventGrid.style.display = "grid";
-    renderEvents();
-    history.replaceState(null, "", "#editorial");
-  };
-
   function copyTextFallback(text) {
     const ta = document.createElement("textarea");
     ta.value = text;
@@ -858,7 +205,6 @@
     document.execCommand("copy");
     document.body.removeChild(ta);
   }
-
   function copyText(text) {
     if (navigator.clipboard && window.isSecureContext) {
       return navigator.clipboard.writeText(text).catch(() => copyTextFallback(text));
@@ -866,7 +212,6 @@
     copyTextFallback(text);
     return Promise.resolve();
   }
-
   const copyEmailBtn = document.getElementById("copyEmailBtn");
   copyEmailBtn.onclick = () => {
     copyText("daniel@dqdmedia.com").then(() => {
@@ -878,22 +223,7 @@
       }, 2000);
     });
   };
-
-  renderEvents();
-
-  renderSeries();
-
-  function handleRoute() {
-    const [section, slug] = location.hash.slice(1).split("/");
-    if (section === "portfolio" && slug) {
-      const name = SERIES.find(n => slugify(n) === slug);
-      if (name) openSeries(name);
-    } else if (section === "editorial" && slug) {
-      const ev = EVENTS.find(e => e.slug === slug);
-      if (ev) openEvent(ev);
-    }
-  }
-  handleRoute();
 </script>
+
 </body>
 </html>

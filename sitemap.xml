@@ -3,6 +3,9 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://dqdmedia.com/</loc>
+  </url>
+  <url>
+    <loc>https://dqdmedia.com/fine-art/</loc>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/carolina-coast/intracoastal-sunset.jpg</image:loc>
       <image:title>Intracoastal Sunset</image:title>
@@ -16,7 +19,7 @@
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/carolina-coast/seed-head-marsh.jpg</image:loc>
       <image:title>Seed Head at the Pond</image:title>
-      <image:caption>A dried seed head stands over still water at the pond&apos;s edge.</image:caption>
+      <image:caption>A dried seed head stands over still water at the pond's edge.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/carolina-coast/spring-blossom.jpg</image:loc>
@@ -66,7 +69,7 @@
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/carolina-coast/surfside-pier-aerial-silhouette.jpg</image:loc>
       <image:title>Surfside Pier, Aerial Silhouette</image:title>
-      <image:caption>Only the pier&apos;s lights break the dark water below.</image:caption>
+      <image:caption>Only the pier's lights break the dark water below.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/carolina-coast/vw-buses.jpg</image:loc>
@@ -116,22 +119,17 @@
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/carolina-after-dark/pier-lights-midnight.jpg</image:loc>
       <image:title>Pier Lights at Midnight</image:title>
-      <image:caption>String lights outline the pier&apos;s pavilion against a black sky, moonlight tracking across the water.</image:caption>
+      <image:caption>String lights outline the pier's pavilion against a black sky, moonlight tracking across the water.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/carolina-after-dark/canopy-of-stars.jpg</image:loc>
       <image:title>Canopy of Stars</image:title>
-      <image:caption>The Milky Way&apos;s haze spreads over a ring of pines.</image:caption>
+      <image:caption>The Milky Way's haze spreads over a ring of pines.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/carolina-after-dark/moonrise-through-pines.jpg</image:loc>
       <image:title>Moonrise Through the Pines</image:title>
       <image:caption>Moonlight rims the trees as stars fill the gaps between branches.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://dqdmedia.com/photos/fineart/carolina-after-dark/surfside-pier-night.jpg</image:loc>
-      <image:title>Surfside Pier at Night</image:title>
-      <image:caption>The pier reaches back toward shore under its own light. Aerial night exposure.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/carolina-after-dark/intracoastal-night.jpg</image:loc>
@@ -221,12 +219,12 @@
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/aerial-perspectives/waccamaw-river-serpentine.jpg</image:loc>
       <image:title>Waccamaw Serpentine</image:title>
-      <image:caption>Another pass over the river&apos;s bends, green canopy in every direction.</image:caption>
+      <image:caption>Another pass over the river's bends, green canopy in every direction.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/wildlife/alligator-huntington-beach.jpg</image:loc>
       <image:title>Alligator in the Brush</image:title>
-      <image:caption>An alligator rests low in the reeds along the water&apos;s edge.</image:caption>
+      <image:caption>An alligator rests low in the reeds along the water's edge.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/wildlife/gull-portrait-market-common.jpg</image:loc>
@@ -236,7 +234,7 @@
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/wildlife/gulls-on-rail-market-common.jpg</image:loc>
       <image:title>Gulls on the Rail</image:title>
-      <image:caption>Gulls line a railing at The Market Common&apos;s lake.</image:caption>
+      <image:caption>Gulls line a railing at The Market Common's lake.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/fineart/wildlife/great-blue-heron.jpg</image:loc>
@@ -258,281 +256,480 @@
       <image:title>Full Throttle</image:title>
       <image:caption>A jet boat carves a hard turn, spray catching the afternoon light.</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://dqdmedia.com/events/</loc>
+  </url>
+  <url>
+    <loc>https://dqdmedia.com/events/morocco-haiti-world-cup/</loc>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0017.jpg</image:loc>
+      <image:title>756A0017</image:title>
       <image:caption>Fans make their way into Mercedes-Benz Stadium ahead of the Haiti-Morocco FIFA World Cup Group C match.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0022.jpg</image:loc>
+      <image:title>756A0022</image:title>
       <image:caption>World Cup signage decorates downtown Atlanta ahead of the Haiti-Morocco match.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0024.jpg</image:loc>
-      <image:caption>A costumed &quot;Super Haitiman&quot; poses with fans outside Mercedes-Benz Stadium before kickoff.</image:caption>
+      <image:title>756A0024</image:title>
+      <image:caption>A costumed "Super Haitiman" poses with fans outside Mercedes-Benz Stadium before kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0027.jpg</image:loc>
+      <image:title>756A0027</image:title>
       <image:caption>World Cup mural art lines the concourse on the walk into Mercedes-Benz Stadium.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0033.jpg</image:loc>
+      <image:title>756A0033</image:title>
       <image:caption>Mercedes-Benz Stadium in downtown Atlanta, host site of the Haiti-Morocco FIFA World Cup Group C match.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0035.jpg</image:loc>
+      <image:title>756A0035</image:title>
       <image:caption>Fans gather in the fan zone outside Mercedes-Benz Stadium before kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0042.jpg</image:loc>
+      <image:title>756A0042</image:title>
       <image:caption>A general view of the pitch at Mercedes-Benz Stadium as fans file in before kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0044.jpg</image:loc>
+      <image:title>756A0044</image:title>
       <image:caption>Morocco takes the pitch ahead of their FIFA World Cup Group C match against Haiti.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0046.jpg</image:loc>
+      <image:title>756A0046</image:title>
       <image:caption>Haiti takes the pitch ahead of their FIFA World Cup Group C match against Morocco.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0066.jpg</image:loc>
+      <image:title>756A0066</image:title>
       <image:caption>Grounds crew waters the pitch at Mercedes-Benz Stadium ahead of kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0069.jpg</image:loc>
+      <image:title>756A0069</image:title>
       <image:caption>Grounds crew finishes watering the pitch moments before kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0119.jpg</image:loc>
-      <image:caption>Haiti&apos;s goalkeeper warms up ahead of kickoff.</image:caption>
+      <image:title>756A0119</image:title>
+      <image:caption>Haiti's goalkeeper warms up ahead of kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0153.jpg</image:loc>
+      <image:title>756A0153</image:title>
       <image:caption>Haiti players take the field for pregame warmups.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0158.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 11 warms up ahead of kickoff.</image:caption>
+      <image:title>756A0158</image:title>
+      <image:caption>Haiti's No. 11 warms up ahead of kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0162.jpg</image:loc>
+      <image:title>756A0162</image:title>
       <image:caption>Haiti and Morocco players share the pitch during pregame warmups.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0176.jpg</image:loc>
-      <image:caption>Haiti&apos;s goalkeeper continues warmups ahead of kickoff.</image:caption>
+      <image:title>756A0176</image:title>
+      <image:caption>Haiti's goalkeeper continues warmups ahead of kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0223.jpg</image:loc>
-      <image:caption>Morocco&apos;s goalkeeper warms up ahead of kickoff.</image:caption>
+      <image:title>756A0223</image:title>
+      <image:caption>Morocco's goalkeeper warms up ahead of kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0230.jpg</image:loc>
+      <image:title>756A0230</image:title>
       <image:caption>Haiti players run through pregame warmups.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0246.jpg</image:loc>
+      <image:title>756A0246</image:title>
       <image:caption>Crews prepare the pitch for the pregame ceremony.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0253.jpg</image:loc>
+      <image:title>756A0253</image:title>
       <image:caption>Final preparations are made for the pregame ceremony at Mercedes-Benz Stadium.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0262.jpg</image:loc>
+      <image:title>756A0262</image:title>
       <image:caption>The pregame ceremony gets underway at Mercedes-Benz Stadium.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0264.jpg</image:loc>
+      <image:title>756A0264</image:title>
       <image:caption>Performers take part in the pregame ceremony ahead of kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0267.jpg</image:loc>
+      <image:title>756A0267</image:title>
       <image:caption>The pregame ceremony continues on the pitch at Mercedes-Benz Stadium.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0268.jpg</image:loc>
+      <image:title>756A0268</image:title>
       <image:caption>The pregame ceremony closes out ahead of kickoff.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0279.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 15 challenges Morocco&apos;s No. 10 in the first half.</image:caption>
+      <image:title>756A0279</image:title>
+      <image:caption>Haiti's No. 15 challenges Morocco's No. 10 in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0280.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 22 battles Morocco&apos;s No. 23 for the ball in the first half.</image:caption>
+      <image:title>756A0280</image:title>
+      <image:caption>Haiti's No. 22 battles Morocco's No. 23 for the ball in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0284.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 22 and Morocco&apos;s No. 23 continue their first-half battle for possession.</image:caption>
+      <image:title>756A0284</image:title>
+      <image:caption>Haiti's No. 22 and Morocco's No. 23 continue their first-half battle for possession.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0302.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 22 challenges Morocco&apos;s No. 24 in the first half.</image:caption>
+      <image:title>756A0302</image:title>
+      <image:caption>Haiti's No. 22 challenges Morocco's No. 24 in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0305.jpg</image:loc>
-      <image:caption>Morocco&apos;s No. 20 breaks away in the first half.</image:caption>
+      <image:title>756A0305</image:title>
+      <image:caption>Morocco's No. 20 breaks away in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0318.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 4 challenges a pass from Morocco&apos;s No. 2 in the first half.</image:caption>
+      <image:title>756A0318</image:title>
+      <image:caption>Haiti's No. 4 challenges a pass from Morocco's No. 2 in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0341.jpg</image:loc>
-      <image:caption>Morocco&apos;s No. 23 fires a shot in the first half.</image:caption>
+      <image:title>756A0341</image:title>
+      <image:caption>Morocco's No. 23 fires a shot in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0354.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 5 and goalkeeper combine to block a Morocco shot in the first half.</image:caption>
+      <image:title>756A0354</image:title>
+      <image:caption>Haiti's No. 5 and goalkeeper combine to block a Morocco shot in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0395.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 10 takes a free kick in the first half.</image:caption>
+      <image:title>756A0395</image:title>
+      <image:caption>Haiti's No. 10 takes a free kick in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0435.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 22 shoots on goal under pressure from Morocco&apos;s No. 36.</image:caption>
+      <image:title>756A0435</image:title>
+      <image:caption>Haiti's No. 22 shoots on goal under pressure from Morocco's No. 36.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0441.jpg</image:loc>
+      <image:title>756A0441</image:title>
       <image:caption>Haiti celebrates their first goal of the match in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0466.jpg</image:loc>
-      <image:caption>Morocco&apos;s No. 20 shoots on goal as Haiti&apos;s No. 5 challenges in the first half.</image:caption>
+      <image:title>756A0466</image:title>
+      <image:caption>Morocco's No. 20 shoots on goal as Haiti's No. 5 challenges in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0471.jpg</image:loc>
+      <image:title>756A0471</image:title>
       <image:caption>Haiti goalkeeper No. 1 makes the save in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0496.jpg</image:loc>
+      <image:title>756A0496</image:title>
       <image:caption>Morocco takes a corner kick in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0501.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 5 clears a Morocco shot off the line in the first half.</image:caption>
+      <image:title>756A0501</image:title>
+      <image:caption>Haiti's No. 5 clears a Morocco shot off the line in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0517.jpg</image:loc>
-      <image:caption>Haiti&apos;s bench watches the action during the first half.</image:caption>
+      <image:title>756A0517</image:title>
+      <image:caption>Haiti's bench watches the action during the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0519.jpg</image:loc>
-      <image:caption>Morocco&apos;s bench watches the action during the first half.</image:caption>
+      <image:title>756A0519</image:title>
+      <image:caption>Morocco's bench watches the action during the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0566.jpg</image:loc>
+      <image:title>756A0566</image:title>
       <image:caption>Haiti celebrates their second goal of the match in the first half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0569.jpg</image:loc>
-      <image:caption>Morocco&apos;s No. 2 takes a free kick in first-half stoppage time.</image:caption>
+      <image:title>756A0569</image:title>
+      <image:caption>Morocco's No. 2 takes a free kick in first-half stoppage time.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0591.jpg</image:loc>
-      <image:caption>Haiti&apos;s goalkeeper makes a save in first-half stoppage time.</image:caption>
+      <image:title>756A0591</image:title>
+      <image:caption>Haiti's goalkeeper makes a save in first-half stoppage time.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0614.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 10 takes a free kick in the second half.</image:caption>
+      <image:title>756A0614</image:title>
+      <image:caption>Haiti's No. 10 takes a free kick in the second half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0645.jpg</image:loc>
-      <image:caption>Morocco&apos;s No. 2 takes a free kick in the second half.</image:caption>
+      <image:title>756A0645</image:title>
+      <image:caption>Morocco's No. 2 takes a free kick in the second half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0650.jpg</image:loc>
-      <image:caption>Haiti&apos;s wall blocks a free kick from Morocco&apos;s No. 2.</image:caption>
+      <image:title>756A0650</image:title>
+      <image:caption>Haiti's wall blocks a free kick from Morocco's No. 2.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0685.jpg</image:loc>
+      <image:title>756A0685</image:title>
       <image:caption>Morocco celebrates a goal in the second half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0699.jpg</image:loc>
-      <image:caption>Morocco goalkeeper Yassine Bounou plays the ball out of the back under pressure from Haiti&apos;s No. 20 in the second half.</image:caption>
+      <image:title>756A0699</image:title>
+      <image:caption>Morocco goalkeeper Yassine Bounou plays the ball out of the back under pressure from Haiti's No. 20 in the second half.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0710.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 9 takes a free kick in second-half stoppage time.</image:caption>
+      <image:title>756A0710</image:title>
+      <image:caption>Haiti's No. 9 takes a free kick in second-half stoppage time.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0719.jpg</image:loc>
-      <image:caption>Morocco&apos;s goalkeeper saves a free kick from Haiti&apos;s No. 9 in second-half stoppage time.</image:caption>
+      <image:title>756A0719</image:title>
+      <image:caption>Morocco's goalkeeper saves a free kick from Haiti's No. 9 in second-half stoppage time.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2026-06-24-morocco-haiti/756A0732.jpg</image:loc>
-      <image:caption>Haiti&apos;s No. 25 takes a corner kick in second-half stoppage time.</image:caption>
+      <image:title>756A0732</image:title>
+      <image:caption>Haiti's No. 25 takes a corner kick in second-half stoppage time.</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://dqdmedia.com/events/hgtc-foundation-gala/</loc>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0018.jpg</image:loc>
-      <image:caption>Auction displays are set up ahead of the Horry-Georgetown Technical College Foundation&apos;s &quot;One Night in Paris&quot; gala.</image:caption>
+      <image:title>756A0018</image:title>
+      <image:caption>Auction displays are set up ahead of the Horry-Georgetown Technical College Foundation's "One Night in Paris" gala.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0037.jpg</image:loc>
+      <image:title>756A0037</image:title>
       <image:caption>A table is set for guests at the Horry-Georgetown Technical College Foundation gala.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0098.jpg</image:loc>
+      <image:title>756A0098</image:title>
       <image:caption>Culinary institute students prepare dishes in the kitchen ahead of the gala dinner.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0119.jpg</image:loc>
+      <image:title>756A0119</image:title>
       <image:caption>A trumpeter performs for guests as the Horry-Georgetown Technical College Foundation gala gets underway.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0132.jpg</image:loc>
-      <image:caption>Croissants and place settings await guests at the &quot;One Night in Paris&quot; themed dinner.</image:caption>
+      <image:title>756A0132</image:title>
+      <image:caption>Croissants and place settings await guests at the "One Night in Paris" themed dinner.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0140.jpg</image:loc>
+      <image:title>756A0140</image:title>
       <image:caption>Guests browse the silent auction displays during the Horry-Georgetown Technical College Foundation gala.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0147.jpg</image:loc>
-      <image:caption>A pastry Eiffel Tower centerpiece anchors the dessert table for the gala&apos;s &quot;One Night in Paris&quot; theme.</image:caption>
+      <image:title>756A0147</image:title>
+      <image:caption>A pastry Eiffel Tower centerpiece anchors the dessert table for the gala's "One Night in Paris" theme.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0152.jpg</image:loc>
-      <image:caption>The culinary institute&apos;s chef and students pose together in the kitchen.</image:caption>
+      <image:title>756A0152</image:title>
+      <image:caption>The culinary institute's chef and students pose together in the kitchen.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0176.jpg</image:loc>
+      <image:title>756A0176</image:title>
       <image:caption>Live music sets the mood as guests mingle before dinner.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0186.jpg</image:loc>
-      <image:caption>Horry-Georgetown Technical College&apos;s president poses with guests at the &quot;Passport to Paris&quot; step-and-repeat.</image:caption>
+      <image:title>756A0186</image:title>
+      <image:caption>Horry-Georgetown Technical College's president poses with guests at the "Passport to Paris" step-and-repeat.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0193.jpg</image:loc>
-      <image:caption>Guests gather in the atrium during the Horry-Georgetown Technical College Foundation gala&apos;s cocktail hour.</image:caption>
+      <image:title>756A0193</image:title>
+      <image:caption>Guests gather in the atrium during the Horry-Georgetown Technical College Foundation gala's cocktail hour.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0206.jpg</image:loc>
+      <image:title>756A0206</image:title>
       <image:caption>A chef and culinary institute students pose in the kitchen during the gala.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0216.jpg</image:loc>
+      <image:title>756A0216</image:title>
       <image:caption>Plated desserts await guests at the Horry-Georgetown Technical College Foundation gala.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0266.jpg</image:loc>
-      <image:caption>Horry-Georgetown Technical College&apos;s president addresses guests during dinner.</image:caption>
+      <image:title>756A0266</image:title>
+      <image:caption>Horry-Georgetown Technical College's president addresses guests during dinner.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0376.jpg</image:loc>
-      <image:caption>An auctioneer works the room during the gala&apos;s live auction.</image:caption>
+      <image:title>756A0376</image:title>
+      <image:caption>An auctioneer works the room during the gala's live auction.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0391.jpg</image:loc>
-      <image:caption>Horry-Georgetown Technical College&apos;s president gives remarks to gala guests.</image:caption>
+      <image:title>756A0391</image:title>
+      <image:caption>Horry-Georgetown Technical College's president gives remarks to gala guests.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://dqdmedia.com/photos/events/2024-03-02-hgtc-foundation-gala/756A0424.jpg</image:loc>
-      <image:caption>The Horry-Georgetown Technical College Culinary Institute at the Market Common campus, site of the Foundation&apos;s annual gala.</image:caption>
+      <image:title>756A0424</image:title>
+      <image:caption>The Horry-Georgetown Technical College Culinary Institute at the Market Common campus, site of the Foundation's annual gala.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dqdmedia.com/video/</loc>
+  </url>
+  <url>
+    <loc>https://dqdmedia.com/portfolio/</loc>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/world-cup-diving-save.jpg</image:loc>
+      <image:title>World Cup Diving Save</image:title>
+      <image:caption>A diving save at the goalmouth, FIFA World Cup Group C.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/baby-portrait-window-light.jpg</image:loc>
+      <image:title>Baby Portrait</image:title>
+      <image:caption>A quiet moment of light and curiosity.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/bench-swing-silhouette.jpg</image:loc>
+      <image:title>Bench Swing Silhouette</image:title>
+      <image:caption>Two figures pause together at the water's edge.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/swing-set-mother-child.jpg</image:loc>
+      <image:title>Swing Set</image:title>
+      <image:caption>A mother and child share a quiet moment on the swings.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/father-children-basketball.jpg</image:loc>
+      <image:title>Father and Children</image:title>
+      <image:caption>A father steadies his son mid-game.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/monkey-bars-golden-hour.jpg</image:loc>
+      <image:title>Monkey Bars, Golden Hour</image:title>
+      <image:caption>Backlit joy on the playground at golden hour.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/snowfall-portrait.jpg</image:loc>
+      <image:title>Snowfall Portrait</image:title>
+      <image:caption>A child pauses in falling snow.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/snowfall-night-portrait.jpg</image:loc>
+      <image:title>Snowfall Night Portrait</image:title>
+      <image:caption>A portrait caught mid-snowfall, lit from within.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/dog-portrait.jpg</image:loc>
+      <image:title>Dog Portrait</image:title>
+      <image:caption>A close portrait, ears up and alert.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/camouflaged-lizard.jpg</image:loc>
+      <image:title>Camouflaged Lizard</image:title>
+      <image:caption>An anole blends into the leaves, barely visible.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/night-aerial-pier.jpg</image:loc>
+      <image:title>Night Aerial Pier</image:title>
+      <image:caption>An aerial view of the pier lit against the night.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/ferris-wheel-blue-sky.jpg</image:loc>
+      <image:title>Ferris Wheel</image:title>
+      <image:caption>The wheel turns against a clear afternoon sky.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/vintage-vw-buses.jpg</image:loc>
+      <image:title>Vintage VW Buses</image:title>
+      <image:caption>Four retired Volkswagen buses, weathered and colorful.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/storm-pier-black-white.jpg</image:loc>
+      <image:title>Storm Pier</image:title>
+      <image:caption>Waves break beneath the pier as a storm rolls in.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/moonlit-river-landscape.jpg</image:loc>
+      <image:title>Moonlit River</image:title>
+      <image:caption>Moonlight traces a path across still water.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/moonrise-detail.jpg</image:loc>
+      <image:title>Moonrise Detail</image:title>
+      <image:caption>The moon's surface, caught in sharp detail.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/waterway-sunset-wide.jpg</image:loc>
+      <image:title>Waterway Sunset</image:title>
+      <image:caption>A boat runs the waterway as the sky catches fire.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/sunset-water-abstract.jpg</image:loc>
+      <image:title>Sunset Water Abstract</image:title>
+      <image:caption>Sunset color dissolves into abstraction on moving water.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/sand-and-glass-macro.jpg</image:loc>
+      <image:title>Sand and Glass Macro</image:title>
+      <image:caption>Sea glass and sand grains, magnified.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/sketching-outdoors-black-white.jpg</image:loc>
+      <image:title>Sketching Outdoors</image:title>
+      <image:caption>An artist sketches quietly in the shade.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/lily-black-white.jpg</image:loc>
+      <image:title>Lily</image:title>
+      <image:caption>A lily opens in soft monochrome light.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/lumen-print-botanical.jpg</image:loc>
+      <image:title>Lumen Print</image:title>
+      <image:caption>A lumen print, sun-exposed directly onto photo paper.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dqdmedia.com/photos/portfolio/light-painting-triptych.jpg</image:loc>
+      <image:title>Light Painting Triptych</image:title>
+      <image:caption>A single gesture of light, rendered three ways.</image:caption>
     </image:image>
   </url>
 </urlset>

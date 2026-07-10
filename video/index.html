@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Video — Daniel Durgin</title>
+<meta name="description" content="Short films and video work by Daniel Durgin of DQD Media, including 'The Last Coin' and drone footage from the Grand Strand.">
+<link rel="canonical" href="https://dqdmedia.com/video/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dqdmedia.com/video/">
+<meta property="og:title" content="Video — Daniel Durgin">
+<meta property="og:description" content="Short films and video work by Daniel Durgin of DQD Media.">
+<meta property="og:image" content="https://dqdmedia.com/social-logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#161514">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500..700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --paper: #161514; --ink: #ece8e0; --ink-soft: #a8a49b;
+    --rule: #2e2c29; --press: #e2524c; --card: #1f1e1c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Serif 4", Georgia, serif; }
+  header {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    padding: 20px 24px; border-bottom: 1px solid var(--rule);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand img { width: 32px; height: 32px; }
+  .brand span { font-family: "Oswald", sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 0.02em; text-transform: uppercase; }
+  .back { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; }
+  .back:hover { color: var(--press); }
+  main { max-width: 1000px; margin: 0 auto; padding: 60px 24px 80px; }
+  .page-title { font-family: "Oswald", sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 44px); text-transform: uppercase; margin-bottom: 8px; }
+  .page-sub { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-soft); letter-spacing: 0.04em; margin-bottom: 56px; }
+  .videos { display: flex; flex-direction: column; gap: 64px; }
+  .video-entry .frame { border-radius: 4px; overflow: hidden; background: var(--card); }
+  .video-entry.wide .frame { aspect-ratio: 16 / 9; }
+  .video-entry.tall .frame { aspect-ratio: 9 / 16; max-width: 360px; margin: 0 auto; }
+  .video-entry iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .video-entry h2 { font-family: "Oswald", sans-serif; font-weight: 600; font-size: 18px; margin-top: 16px; }
+  .video-entry p { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-soft); margin-top: 4px; letter-spacing: 0.02em; }
+  footer { text-align: center; padding: 30px 20px; border-top: 1px solid var(--rule); font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+</style>
+<script data-goatcounter="https://dqdmedia.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="/">
+    <img src="/logo.png" alt="DQD Media logo">
+    <span>Daniel Durgin</span>
+  </a>
+  <a class="back" href="/">&larr; All sections</a>
+</header>
+
+<main>
+  <h1 class="page-title">Video</h1>
+  <p class="page-sub">Short films &amp; edits.</p>
+  <div class="videos">
+    <div class="video-entry wide">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/QD0VqK3bN0Q" title="The Last Coin" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <h2>The Last Coin</h2>
+      <p>Short film project.</p>
+    </div>
+    <div class="video-entry tall">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/Hp0GOH0hA2M" title="Surfside Beach and Pier Drone Shots" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <h2>Surfside Beach &amp; Pier</h2>
+      <p>Drone footage.</p>
+    </div>
+  </div>
+</main>
+
+<footer>&copy; 2026 Daniel Durgin / DQD Media<br>All images &copy; the photographer</footer>
+
+</body>
+</html>

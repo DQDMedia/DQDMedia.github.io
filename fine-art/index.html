@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Fine Art — Daniel Durgin</title>
+<meta name="description" content="Fine art photography by Daniel Durgin of DQD Media — Carolina coast, night skies, wildlife, and experimental darkroom work. Prints available on paper, metal, and canvas.">
+<link rel="canonical" href="https://dqdmedia.com/fine-art/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dqdmedia.com/fine-art/">
+<meta property="og:title" content="Fine Art — Daniel Durgin">
+<meta property="og:description" content="Fine art photography by Daniel Durgin of DQD Media — Carolina coast, night skies, wildlife, and experimental darkroom work.">
+<meta property="og:image" content="https://dqdmedia.com/social-logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#161514">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500..700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --paper: #161514; --ink: #ece8e0; --ink-soft: #a8a49b;
+    --rule: #2e2c29; --press: #e2524c; --card: #1f1e1c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  img { -webkit-user-select: none; user-select: none; -webkit-user-drag: none; user-drag: none; }
+  body { background: var(--paper); color: var(--ink); font-family: "Source Serif 4", Georgia, serif; }
+  header {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    padding: 20px 24px; border-bottom: 1px solid var(--rule);
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .brand img { width: 32px; height: 32px; }
+  .brand span {
+    font-family: "Oswald", sans-serif; font-weight: 800; font-size: 15px;
+    letter-spacing: 0.02em; text-transform: uppercase;
+  }
+  .back {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink-soft); text-decoration: none;
+  }
+  .back:hover { color: var(--press); }
+  main { max-width: 1200px; margin: 0 auto; padding: 60px 24px 40px; }
+  .page-title {
+    font-family: "Oswald", sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 44px);
+    text-transform: uppercase; margin-bottom: 8px;
+  }
+  .page-sub { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-soft); letter-spacing: 0.04em; margin-bottom: 64px; }
+  .category { margin-bottom: 72px; }
+  .category h2 {
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--press); margin-bottom: 20px;
+  }
+  .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .shot {
+    border: none; background: none; cursor: pointer; text-align: left; padding: 0; display: block; width: 100%;
+  }
+  .shot-img { height: 220px; width: 100%; object-fit: cover; display: block; border-radius: 2px; }
+  .shot .title {
+    font-family: "Oswald", sans-serif; font-weight: 500; font-size: 14px; margin-top: 10px; color: var(--ink-soft);
+  }
+  .shot:hover .title { color: var(--ink); }
+
+  .lightbox {
+    position: fixed; inset: 0; z-index: 100; display: none;
+    background: rgba(5,5,4,0.94); align-items: center; justify-content: center; padding: 20px;
+  }
+  .lightbox.open { display: flex; }
+  .lb-card { max-width: 720px; width: 100%; }
+  .lb-img { height: min(58vh, 460px); width: 100%; border-radius: 4px; object-fit: contain; display: block; }
+  .lb-cap { font-family: "IBM Plex Mono", monospace; font-size: 12px; line-height: 1.6; color: #e6e1d5; margin-top: 12px; }
+  .lb-cap .slug { color: #f0b429; }
+  .lb-close {
+    position: absolute; top: 16px; right: 16px; background: none; border: 1px solid #555;
+    color: #ddd; border-radius: 999px; width: 38px; height: 38px; font-size: 17px; cursor: pointer;
+  }
+  .lb-nav {
+    position: absolute; top: 50%; transform: translateY(-50%); background: rgba(20,19,17,0.6);
+    border: 1px solid #555; color: #ddd; border-radius: 999px; width: 44px; height: 44px;
+    font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .lb-nav:hover, .lb-nav:focus-visible { border-color: #f0b429; color: #f0b429; }
+  .lb-prev { left: 10px; }
+  .lb-next { right: 10px; }
+  @media (min-width: 760px) { .lb-prev { left: 24px; } .lb-next { right: 24px; } }
+
+  footer {
+    text-align: center; padding: 30px 20px; border-top: 1px solid var(--rule);
+    font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+</style>
+<script data-goatcounter="https://dqdmedia.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="/">
+    <img src="/logo.png" alt="DQD Media logo">
+    <span>Daniel Durgin</span>
+  </a>
+  <a class="back" href="/">&larr; All sections</a>
+</header>
+
+<main>
+  <h1 class="page-title">Fine Art</h1>
+  <p class="page-sub">Prints available on paper, metal &amp; canvas — inquire via <a href="/#contact" style="color:inherit;" onclick="event.stopPropagation()">contact</a>.</p>
+  <div id="categories"></div>
+</main>
+
+<footer>&copy; 2026 Daniel Durgin / DQD Media<br>All images &copy; the photographer</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">&#10005;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image">&#8249;</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next image">&#8250;</button>
+  <div class="lb-card">
+    <img class="lb-img" id="lbImg" alt="">
+    <p class="lb-cap" id="lbCap"></p>
+    <p style="margin-top:10px;"><a id="lbLink" href="https://dqdmedia.client-gallery.com/gallery/dqdmedia" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#f0b429;text-decoration:none;">Purchase this print &rarr;</a></p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("contextmenu", (e) => { if (e.target.tagName === "IMG") e.preventDefault(); });
+  document.addEventListener("dragstart", (e) => { if (e.target.tagName === "IMG") e.preventDefault(); });
+
+  const SHOTS = [
+    { title: "Intracoastal Sunset", cat: "Carolina Coast", slug: "INTRACOASTAL WATERWAY, SC", cap: "A small boat runs the waterway as the sky catches fire at last light.", img: "/photos/fineart/carolina-coast/intracoastal-sunset.jpg" },
+    { title: "Intracoastal Close", cat: "Carolina Coast", slug: "INTRACOASTAL WATERWAY, SC", cap: "Sunset color breaks across the surface of the waterway.", img: "/photos/fineart/carolina-coast/intracoastal-close.jpg" },
+    { title: "Seed Head at the Pond", cat: "Carolina Coast", slug: "SOCASTEE, SC", cap: "A dried seed head stands over still water at the pond's edge.", img: "/photos/fineart/carolina-coast/seed-head-marsh.jpg" },
+    { title: "Spring Blossom", cat: "Carolina Coast", slug: "SOCASTEE, SC", cap: "New blossoms open on a bare branch in early spring light.", img: "/photos/fineart/carolina-coast/spring-blossom.jpg" },
+    { title: "Wheel at Broadway", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH — MYRTLE BEACH, SC", cap: "The Broadway 360 wheel turns against a clear summer sky.", img: "/photos/fineart/carolina-coast/broadway-wheel-blue-sky.jpg" },
+    { title: "Lighthouse at Broadway", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH — MYRTLE BEACH, SC", cap: "A replica lighthouse rises against a clear blue sky.", img: "/photos/fineart/carolina-coast/broadway-lighthouse.jpg" },
+    { title: "Broadway at Sunset", cat: "Carolina Coast", slug: "BROADWAY AT THE BEACH — MYRTLE BEACH, SC", cap: "The wheel and waterfront rides glow under a burning sunset sky.", img: "/photos/fineart/carolina-coast/broadway-sunset.jpg" },
+    { title: "Storm Over Garden City Pier", cat: "Carolina Coast", slug: "GARDEN CITY, SC", cap: "Waves break beneath the pier as a storm rolls in overhead.", img: "/photos/fineart/carolina-coast/storm-garden-city-pier.jpg" },
+    { title: "Heron in the Marsh", cat: "Carolina Coast", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "A heron wades the shallows at low tide.", img: "/photos/fineart/carolina-coast/heron-huntington-marsh.jpg" },
+    { title: "Beneath the Live Oaks", cat: "Carolina Coast", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "Spanish moss frames a view out over the marsh.", img: "/photos/fineart/carolina-coast/huntington-beach-live-oaks.jpg" },
+    { title: "Surfside Pier, Blue Hour", cat: "Carolina Coast", slug: "SURFSIDE BEACH, SC", cap: "The rebuilt pier glows above the water as the town lights come on.", img: "/photos/fineart/carolina-coast/surfside-pier-blue-hour.jpg" },
+    { title: "Surfside Pier at Night", cat: "Carolina Coast", slug: "SURFSIDE BEACH, SC", cap: "The pier reaches back toward shore under its own light. Aerial night exposure.", img: "/photos/fineart/carolina-coast/surfside-pier-night.jpg" },
+    { title: "Surfside Pier, Aerial Silhouette", cat: "Carolina Coast", slug: "SURFSIDE BEACH, SC", cap: "Only the pier's lights break the dark water below.", img: "/photos/fineart/carolina-coast/surfside-pier-aerial-silhouette.jpg" },
+    { title: "Rust and Rainbow", cat: "Carolina Coast", slug: "HWY 378, SC", cap: "Four vintage Volkswagen buses sit retired in the grass along the highway.", img: "/photos/fineart/carolina-coast/vw-buses.jpg" },
+    { title: "Waccamaw Bend", cat: "Carolina Coast", slug: "WACCAMAW RIVER, SC", cap: "The river bends through bare cypress on a gray winter afternoon.", img: "/photos/fineart/carolina-coast/waccamaw-river-bend-winter.jpg" },
+    { title: "Waccamaw River, High Above", cat: "Carolina Coast", slug: "WACCAMAW RIVER, SC", cap: "The river threads for miles through coastal forest, seen from high altitude.", img: "/photos/fineart/carolina-coast/waccamaw-river-high-altitude.jpg" },
+    { title: "Waccamaw Confluence", cat: "Carolina Coast", slug: "WACCAMAW RIVER, SC", cap: "Two channels of the river meet, seen from directly overhead.", img: "/photos/fineart/carolina-coast/waccamaw-river-confluence.jpg" },
+
+    { title: "Surfside Pier, Blue Hour", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "The rebuilt pier glows above the water as the town lights come on.", img: "/photos/fineart/carolina-after-dark/surfside-pier-blue-hour.jpg" },
+    { title: "Moon", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "A gibbous moon rises alone in a black sky.", img: "/photos/fineart/carolina-after-dark/moon.jpg" },
+    { title: "Night Sky Through Pines", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "Stars gather in a gap between silhouetted pines.", img: "/photos/fineart/carolina-after-dark/night-sky-through-pines.jpg" },
+    { title: "Blood Moon", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "The moon turns deep red during a total lunar eclipse.", img: "/photos/fineart/carolina-after-dark/blood-moon.jpg" },
+    { title: "Stars Over Surfside", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "A long exposure of the surf under a star-filled sky.", img: "/photos/fineart/carolina-after-dark/stars-over-surfside.jpg" },
+    { title: "Pier Lights at Midnight", cat: "Carolina After Dark", slug: "SURFSIDE BEACH, SC", cap: "String lights outline the pier's pavilion against a black sky, moonlight tracking across the water.", img: "/photos/fineart/carolina-after-dark/pier-lights-midnight.jpg" },
+    { title: "Canopy of Stars", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "The Milky Way's haze spreads over a ring of pines.", img: "/photos/fineart/carolina-after-dark/canopy-of-stars.jpg" },
+    { title: "Moonrise Through the Pines", cat: "Carolina After Dark", slug: "MYRTLE BEACH, SC", cap: "Moonlight rims the trees as stars fill the gaps between branches.", img: "/photos/fineart/carolina-after-dark/moonrise-through-pines.jpg" },
+    { title: "Intracoastal at Night", cat: "Carolina After Dark", slug: "INTRACOASTAL WATERWAY, SC", cap: "A long exposure over still water, the waterway lit only by the moon and shoreline.", img: "/photos/fineart/carolina-after-dark/intracoastal-night.jpg" },
+
+    { title: "Green Current", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram, looping current rendered in acid green.", img: "/photos/fineart/experimental-processes/chemigram-green-current.jpg" },
+    { title: "Phase Shift", cat: "Experimental Processes", slug: "STUDIO", cap: "A triptych chemigram, three panels of chemical reaction across a single frame.", img: "/photos/fineart/experimental-processes/phase-shift.jpg" },
+    { title: "Amber Bloom", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram, developer bleeding gold and black across the paper.", img: "/photos/fineart/experimental-processes/chemigram-amber-bloom.jpg" },
+    { title: "Black Bloom", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram in high contrast, chemical reaction outlined in white.", img: "/photos/fineart/experimental-processes/chemigram-black-bloom.jpg" },
+    { title: "Magenta Drift", cat: "Experimental Processes", slug: "DARKROOM", cap: "Chemigram, magenta and amber tones pooling across the emulsion.", img: "/photos/fineart/experimental-processes/chemigram-magenta-drift.jpg" },
+    { title: "Lumen Print No. 1", cat: "Experimental Processes", slug: "STUDIO", cap: "Botanical lumen print, sun-exposed directly on photo paper.", img: "/photos/fineart/experimental-processes/lumen-print-01.jpg" },
+    { title: "Lumen Print No. 2", cat: "Experimental Processes", slug: "STUDIO", cap: "Lumen print of a flower in bloom, colors shifted by exposure time.", img: "/photos/fineart/experimental-processes/lumen-print-02.jpg" },
+    { title: "Lumen Print No. 3", cat: "Experimental Processes", slug: "STUDIO", cap: "Lumen print of leaf and stem, warm tones from a long sun exposure.", img: "/photos/fineart/experimental-processes/lumen-print-03.jpg" },
+
+    { title: "Pasture Fence", cat: "Black and White", slug: "SOCASTEE, SC", cap: "A weathered fence line, a horse grazing soft in the background.", img: "/photos/fineart/black-and-white/pasture-fence.jpg" },
+    { title: "Garden City Pier", cat: "Black and White", slug: "GARDEN CITY, SC", cap: "Storm light and breaking surf beneath the pier, in monochrome.", img: "/photos/fineart/black-and-white/garden-city-pier.jpg" },
+    { title: "Surfside Pier After Dark", cat: "Black and White", slug: "SURFSIDE BEACH, SC", cap: "An aerial view of the pier lit alone against the night.", img: "/photos/fineart/black-and-white/surfside-pier-aerial-night.jpg" },
+    { title: "Weathered Chair", cat: "Black and White", slug: "SOCASTEE, SC", cap: "A collapsing adirondack chair, reclaimed by the treeline.", img: "/photos/fineart/black-and-white/weathered-chair.jpg" },
+    { title: "Web and Spider", cat: "Black and White", slug: "SOCASTEE, SC", cap: "A garden spider rebuilds its web among the fall foliage.", img: "/photos/fineart/black-and-white/spider-web.jpg" },
+
+    { title: "Winter on the Waccamaw", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "A boat works the river beneath a bruised winter sky, seen from altitude.", img: "/photos/fineart/aerial-perspectives/waccamaw-river-winter-boat.jpg" },
+    { title: "Waccamaw Bend", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "The river bends through bare cypress on a gray winter afternoon.", img: "/photos/fineart/aerial-perspectives/waccamaw-river-bend-winter.jpg" },
+    { title: "Waccamaw River, High Above", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "The river threads for miles through coastal forest, seen from high altitude.", img: "/photos/fineart/aerial-perspectives/waccamaw-river-high-altitude.jpg" },
+    { title: "Waccamaw Serpentine", cat: "Aerial Perspectives", slug: "WACCAMAW RIVER, SC", cap: "Another pass over the river's bends, green canopy in every direction.", img: "/photos/fineart/aerial-perspectives/waccamaw-river-serpentine.jpg" },
+
+    { title: "Alligator in the Brush", cat: "Wildlife", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "An alligator rests low in the reeds along the water's edge.", img: "/photos/fineart/wildlife/alligator-huntington-beach.jpg" },
+    { title: "Ring-Billed Gull", cat: "Wildlife", slug: "MARKET COMMON, SC", cap: "A ring-billed gull poses at The Market Common.", img: "/photos/fineart/wildlife/gull-portrait-market-common.jpg" },
+    { title: "Gulls on the Rail", cat: "Wildlife", slug: "MARKET COMMON, SC", cap: "Gulls line a railing at The Market Common's lake.", img: "/photos/fineart/wildlife/gulls-on-rail-market-common.jpg" },
+    { title: "Great Blue Heron", cat: "Wildlife", slug: "HUNTINGTON BEACH STATE PARK, SC", cap: "A great blue heron hunts the shallows at low tide.", img: "/photos/fineart/wildlife/great-blue-heron.jpg" },
+    { title: "Rooster", cat: "Wildlife", slug: "SOCASTEE, SC", cap: "A bantam rooster crows from a fence post.", img: "/photos/fineart/wildlife/rooster.jpg" },
+
+    { title: "Fourth of July", cat: "Motion and Energy", slug: "MYRTLE BEACH, SC", cap: "Fireworks burst over the palms on Independence Day.", img: "/photos/fineart/motion-and-energy/fourth-of-july-fireworks.jpg" },
+    { title: "Full Throttle", cat: "Motion and Energy", slug: "BROADWAY AT THE BEACH — MYRTLE BEACH, SC", cap: "A jet boat carves a hard turn, spray catching the afternoon light.", img: "/photos/fineart/motion-and-energy/speedboat-broadway.jpg" },
+  ];
+
+  const CATS = ["Carolina Coast", "Carolina After Dark", "Experimental Processes", "Black and White", "Aerial Perspectives", "Wildlife", "Motion and Energy"];
+
+  function escAttr(s) { return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;"); }
+  function thumbOf(img) { return img.replace(/\.jpg$/, "-thumb.jpg"); }
+
+  const categoriesEl = document.getElementById("categories");
+  CATS.forEach(cat => {
+    const shots = SHOTS.filter(s => s.cat === cat);
+    const section = document.createElement("div");
+    section.className = "category";
+    section.innerHTML = `<h2>${escAttr(cat)}</h2><div class="grid"></div>`;
+    const grid = section.querySelector(".grid");
+    shots.forEach((s) => {
+      const btn = document.createElement("button");
+      btn.className = "shot";
+      btn.innerHTML = `<img class="shot-img" src="${thumbOf(s.img)}" srcset="${thumbOf(s.img)} 900w, ${s.img} 2400w" sizes="(max-width: 600px) 100vw, 380px" alt="${escAttr(s.title)}" loading="lazy"><div class="title">${escAttr(s.title)}</div>`;
+      btn.onclick = () => openLightbox(shots, shots.indexOf(s));
+      grid.appendChild(btn);
+    });
+    categoriesEl.appendChild(section);
+  });
+
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lbImg");
+  const lbCap = document.getElementById("lbCap");
+  const lbPrev = document.getElementById("lbPrev");
+  const lbNext = document.getElementById("lbNext");
+  const lbClose = document.getElementById("lbClose");
+  const lbLink = document.getElementById("lbLink");
+  let lbItems = [];
+  let lbIndex = 0;
+  let lbLastFocused = null;
+
+  function closeLightbox() {
+    lb.classList.remove("open");
+    if (lbLastFocused) { lbLastFocused.focus(); lbLastFocused = null; }
+  }
+  function showLightboxAt(i) {
+    lbIndex = (i + lbItems.length) % lbItems.length;
+    const s = lbItems[lbIndex];
+    lbImg.src = s.img;
+    lbImg.alt = s.title;
+    lbCap.innerHTML = `<span class="slug">${escAttr(s.slug)}</span> — ${escAttr(s.cap)}`;
+  }
+  function openLightbox(items, startIndex) {
+    lbItems = items;
+    lbLastFocused = document.activeElement;
+    showLightboxAt(startIndex);
+    lb.classList.add("open");
+    const showNav = lbItems.length > 1;
+    lbPrev.style.display = showNav ? "flex" : "none";
+    lbNext.style.display = showNav ? "flex" : "none";
+    lbClose.focus();
+  }
+  lbPrev.onclick = (e) => { e.stopPropagation(); showLightboxAt(lbIndex - 1); };
+  lbNext.onclick = (e) => { e.stopPropagation(); showLightboxAt(lbIndex + 1); };
+  lbClose.onclick = () => closeLightbox();
+  lb.addEventListener("click", (e) => { if (e.target === lb) closeLightbox(); });
+
+  let lbTouchStartX = null;
+  lb.addEventListener("touchstart", (e) => { lbTouchStartX = e.changedTouches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", (e) => {
+    if (lbTouchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - lbTouchStartX;
+    if (Math.abs(dx) > 40) { dx > 0 ? showLightboxAt(lbIndex - 1) : showLightboxAt(lbIndex + 1); }
+    lbTouchStartX = null;
+  }, { passive: true });
+
+  document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") showLightboxAt(lbIndex - 1);
+    if (e.key === "ArrowRight") showLightboxAt(lbIndex + 1);
+    if (e.key === "Tab") {
+      const focusable = [lbClose, lbPrev, lbNext, lbLink].filter(el => el.offsetParent !== null);
+      const idx = focusable.indexOf(document.activeElement);
+      e.preventDefault();
+      const next = e.shiftKey ? (idx - 1 + focusable.length) % focusable.length : (idx + 1) % focusable.length;
+      focusable[next].focus();
+    }
+  });
+</script>
+
+</body>
+</html>
