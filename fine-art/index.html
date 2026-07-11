@@ -48,7 +48,15 @@
     font-family: "Oswald", sans-serif; font-weight: 700; font-size: clamp(30px, 5vw, 44px);
     text-transform: uppercase; margin-bottom: 8px;
   }
-  .page-sub { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-soft); letter-spacing: 0.04em; margin-bottom: 64px; }
+  .page-sub { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-soft); letter-spacing: 0.04em; margin-bottom: 20px; }
+  .buy-prints-btn {
+    display: inline-block; margin-bottom: 64px;
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; letter-spacing: 0.06em;
+    text-transform: uppercase; text-decoration: none; color: #f0b429;
+    border: 1px solid #f0b429; border-radius: 999px; padding: 12px 26px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .buy-prints-btn:hover, .buy-prints-btn:focus-visible { background: #f0b429; color: #161514; }
   .category { margin-bottom: 72px; }
   .category h2 {
     font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.18em;
@@ -108,7 +116,8 @@
 
 <main>
   <h1 class="page-title">Fine Art</h1>
-  <p class="page-sub">Prints available on paper, metal &amp; canvas — <a href="https://dqdmedia.client-gallery.com/gallery/dqdmedia" target="_blank" rel="noopener" style="color:#f0b429;">purchase prints &rarr;</a></p>
+  <p class="page-sub">Prints available on paper, metal &amp; canvas.</p>
+  <a class="buy-prints-btn" href="https://dqdmedia.client-gallery.com/gallery/dqdmedia" target="_blank" rel="noopener">Purchase Prints &rarr;</a>
   <div id="categories"></div>
 </main>
 
