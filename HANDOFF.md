@@ -124,3 +124,5 @@ Daniel is moving from a laptop to a Mac mini. Everything in this repo is already
 
 1. **SSH auth for GitHub** — generate/copy an SSH key and add it to the GitHub account, or `git push` will fail.
 2. **Claude's local memory files** (`~/.claude/projects/.../memory/*.md`) — these live on the laptop's disk and won't exist on the Mac mini unless manually copied or synced. This `HANDOFF.md` file is the portable substitute: everything load-bearing from memory has been folded into this document.
+
+**2026-07-11 — Mac mini transfer confirmed:** new SSH key (`~/.ssh/id_ed25519_dqdmedia`) generated and added to the GitHub account, remote switched to SSH, git identity set to Daniel Durgin / daniel@dqdmedia.com, local preview (`.claude/launch.json`) repointed at this machine's working directory. Push access verified end-to-end.
