@@ -51,12 +51,15 @@
   .page-sub { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-soft); letter-spacing: 0.04em; margin-bottom: 20px; }
   .buy-prints-btn {
     display: inline-block; margin-bottom: 64px;
-    font-family: "IBM Plex Mono", monospace; font-size: 13px; letter-spacing: 0.06em;
-    text-transform: uppercase; text-decoration: none; color: #f0b429;
-    border: 1px solid #f0b429; border-radius: 999px; padding: 12px 26px;
-    transition: background 0.2s ease, color 0.2s ease;
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; text-decoration: none; color: #161514;
+    background: #f0b429; border: 1px solid #f0b429; border-radius: 999px; padding: 13px 28px;
+    box-shadow: 0 2px 14px rgba(240, 180, 41, 0.35);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
   }
-  .buy-prints-btn:hover, .buy-prints-btn:focus-visible { background: #f0b429; color: #161514; }
+  .buy-prints-btn:hover, .buy-prints-btn:focus-visible {
+    background: #ffcf5c; box-shadow: 0 2px 20px rgba(240, 180, 41, 0.55);
+  }
   .category { margin-bottom: 72px; }
   .category h2 {
     font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.18em;
