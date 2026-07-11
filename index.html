@@ -102,7 +102,7 @@
   .doors {
     flex: 1;
     display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
-    gap: 2px; min-height: 60vh;
+    gap: 10px; min-height: 60vh; padding: 0 40px;
   }
   .door {
     position: relative; overflow: hidden; text-decoration: none; display: block;
@@ -154,7 +154,7 @@
   footer a { color: inherit; }
 
   @media (max-width: 640px) {
-    .doors { grid-template-columns: 1fr; grid-template-rows: repeat(4, 42vh); min-height: auto; }
+    .doors { grid-template-columns: 1fr; grid-template-rows: repeat(4, 42vh); min-height: auto; padding: 0; }
   }
 </style>
 <script data-goatcounter="https://dqdmedia.goatcounter.com/count"
