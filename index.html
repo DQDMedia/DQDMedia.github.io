@@ -102,7 +102,7 @@
   .doors {
     flex: 1;
     display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
-    gap: 10px; min-height: 60vh; padding: 0 40px;
+    gap: 10px; min-height: 60vh; padding: 0 100px;
   }
   .door {
     position: relative; overflow: hidden; text-decoration: none; display: block;
@@ -153,6 +153,10 @@
   }
   footer a { color: inherit; }
 
+  @media (min-width: 641px) {
+    .doors .door:nth-child(odd) .door-label { text-align: right; }
+  }
+
   @media (max-width: 640px) {
     .doors { grid-template-columns: 1fr; grid-template-rows: repeat(4, 42vh); min-height: auto; padding: 0; }
   }
@@ -175,7 +179,7 @@
   <a class="door" id="doorEvents" href="/events/" style="background-image:url('photos/events/2026-06-24-morocco-haiti/756A0267-thumb.jpg')">
     <span class="door-label"><h2>Events</h2><span>Assignment &amp; event coverage</span></span>
   </a>
-  <a class="door video" href="/video/">
+  <a class="door video" href="/video/" style="background-image:url('photos/video/the-last-coin-thumb.jpg')">
     <span class="door-label"><h2>Video</h2><span>Short films &amp; edits</span></span>
   </a>
   <a class="door" id="doorPortfolio" href="/portfolio/" style="background-image:url('photos/portfolio/bench-swing-silhouette-thumb.jpg')">
